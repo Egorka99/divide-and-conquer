@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "Divide-and-conquer\ConsoleTest.csproj", "{8787EBF8-2909-40ED-A736-EC194F7BC026}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryDaC", "ClassLibraryDaC\ClassLibraryDaC.csproj", "{D2A68D0B-2D6D-4035-803D-8566EDEF85C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8787EBF8-2909-40ED-A736-EC194F7BC026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8787EBF8-2909-40ED-A736-EC194F7BC026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8787EBF8-2909-40ED-A736-EC194F7BC026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8787EBF8-2909-40ED-A736-EC194F7BC026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A68D0B-2D6D-4035-803D-8566EDEF85C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A68D0B-2D6D-4035-803D-8566EDEF85C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A68D0B-2D6D-4035-803D-8566EDEF85C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A68D0B-2D6D-4035-803D-8566EDEF85C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08AEDF24-E035-45CE-939A-217584B62A0C}
+	EndGlobalSection
+EndGlobal
