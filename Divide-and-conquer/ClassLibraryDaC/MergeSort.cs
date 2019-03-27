@@ -6,56 +6,8 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryDaC
 {
-    public class ClosestPointPair
-    {
-        /// <summary>
-        /// Минимальная дистанция между двумя точками
-        /// </summary>
-        double MinDist;
-
-        /// <summary>
-        /// Номер первой точки с минимальной дистанцией 
-        /// </summary>
-        int AnswerA;
-
-        /// <summary>
-        /// Номер второй точки с минимальной дистанцией 
-        /// </summary>
-        int AnswerB; 
-
-        /// <summary>
-        /// Структура точки: координаты x,y и ее номер 
-        /// </summary>
-        public struct PointId
-        { 
-            public int x, y, id;  
-        }  
-          
-        /// <summary>
-        /// Наибольший x двух точек
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
-        private static bool Cmp_x(PointId a, PointId b)
-        {
-            return a.x < b.x || a.x == b.x && a.y < b.y;  
-        }  
-
-        /// <summary> 
-        /// Наибольший y двух точек 
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
-        private static bool Cmp_y(PointId a, PointId b)
-        {
-            return a.y < b.y; 
-        }
-
-    }
-     
-
+    
+    
     public class MergeSort 
     {
         /// <summary> 
