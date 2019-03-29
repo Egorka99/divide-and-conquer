@@ -1,0 +1,10 @@
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\Divide-and-conquer\bin\Debug\Divide-and-conquer.exe.config
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\Divide-and-conquer\bin\Debug\Divide-and-conquer.exe
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\Divide-and-conquer\bin\Debug\Divide-and-conquer.pdb
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\Divide-and-conquer\obj\Debug\ConsoleTest.csprojAssemblyReference.cache
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\Divide-and-conquer\obj\Debug\ConsoleTest.csproj.CoreCompileInputs.cache
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\Divide-and-conquer\obj\Debug\Divide-and-conquer.exe
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\Divide-and-conquer\obj\Debug\Divide-and-conquer.pdb
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\Divide-and-conquer\bin\Debug\ClassLibraryDaC.dll
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\Divide-and-conquer\bin\Debug\ClassLibraryDaC.pdb
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\Divide-and-conquer\obj\Debug\ConsoleTest.csproj.CopyComplete

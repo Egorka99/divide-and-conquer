@@ -1,0 +1,6 @@
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\ClassLibraryDaC\bin\Debug\ClassLibraryDaC.dll
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\ClassLibraryDaC\bin\Debug\ClassLibraryDaC.pdb
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\ClassLibraryDaC\obj\Debug\ClassLibraryDaC.csprojAssemblyReference.cache
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\ClassLibraryDaC\obj\Debug\ClassLibraryDaC.csproj.CoreCompileInputs.cache
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\ClassLibraryDaC\obj\Debug\ClassLibraryDaC.dll
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\ClassLibraryDaC\obj\Debug\ClassLibraryDaC.pdb

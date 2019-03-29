@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryDaC\ClassLibraryDaC.csproj">
+      <Project>{d2a68d0b-2d6d-4035-803d-8566edef85c8}</Project>
+      <Name>ClassLibraryDaC</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
