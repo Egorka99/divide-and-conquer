@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClassLibraryDaC
-{
-    
+{  
     
     public class MergeSort 
     {

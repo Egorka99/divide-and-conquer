@@ -1,0 +1,13 @@
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe.config
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\bin\Debug\WindowsFormsApp.pdb
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\obj\Debug\WindowsFormsApp.csprojAssemblyReference.cache
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form1.resources
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.GenerateResource.cache
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CoreCompileInputs.cache
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\bin\Debug\ClassLibraryDaC.dll
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\bin\Debug\ClassLibraryDaC.pdb
+D:\MVS Project\repos\divide-and-conquer\Divide-and-conquer\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CopyComplete

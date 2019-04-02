@@ -46,12 +46,11 @@ namespace ClassLibraryDaC
         public ClosestPointPair(PointId[] A)
         {
             MinDist = 1e20;
- 
+  
             a = A; 
 
-
-        }
-
+        } 
+         
         /// <summary>
         /// Нахождение двух ближайших пар точек 
         /// </summary>
@@ -61,7 +60,7 @@ namespace ClassLibraryDaC
             List<PointId> NearestPair = new List<PointId>(); 
 
             SortByX(a, 0 ,a.Length - 1); 
-            Rec(0, a.Length - 1);  
+            Rec(0, a.Length - 1);   
 
             for (int i = 0; i < a.Length; i++)
             {
@@ -80,9 +79,9 @@ namespace ClassLibraryDaC
         /// <returns></returns>
         public double MinDistance()  
         {
-            SortByX(a, 0, a.Length - 1);
+            SortByX(a, 0, a.Length - 1); 
             Rec(0, a.Length - 1);
-              
+               
             return Math.Round(MinDist,3);
         }
 
@@ -94,7 +93,7 @@ namespace ClassLibraryDaC
         /// <param name="first"></param>
         /// <param name="last"></param> 
         /// <returns></returns>
-        public static PointId[] SortByX(PointId[] a, int first, int last)
+        private static PointId[] SortByX(PointId[] a, int first, int last)
         {
             List<PointId> OrderedArr = new List<PointId>(); // список для сортировки 
 
@@ -102,8 +101,8 @@ namespace ClassLibraryDaC
             {  
                 OrderedArr.Add(a[i]);    
             }
-
-            OrderedArr = OrderedArr.OrderBy(arr => arr.x).ToList(); // сортируем 
+             
+            OrderedArr = a.OrderBy(arr => arr.x).ToList(); // сортируем 
 
             return OrderedArr.ToArray(); // преобразововаем в массив 
         } 
@@ -115,7 +114,7 @@ namespace ClassLibraryDaC
         /// <param name="first"></param>
         /// <param name="last"></param>
         /// <returns></returns>
-        public static PointId[] SortByY(PointId[] a, int first, int last)
+        private static PointId[] SortByY(PointId[] a, int first, int last)
         {
             List<PointId> OrderedArr = new List<PointId>(); // список для сортировки 
 
@@ -135,14 +134,14 @@ namespace ClassLibraryDaC
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
-        public static void CalculateDist(PointId a, PointId b) 
+        private static void CalculateDist(PointId a, PointId b) 
         {
             double Dist = Math.Sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y) + .0); // вычисляем расстояние
 
             // если это растояние меньше минимального: делаем его минимальным, добавляем точки в ответ 
             if (Dist < MinDist) 
             {
-                MinDist = Dist; 
+                MinDist = Dist;  
                 AnswerA = a.id; 
                 AnswerB = b.id;
             }
