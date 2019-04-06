@@ -34,6 +34,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.buttonCalculate = new System.Windows.Forms.Button();
@@ -63,6 +64,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.textBoxG1point = new System.Windows.Forms.TextBox();
             this.textBoxGDist = new System.Windows.Forms.TextBox();
             this.textBoxG2point = new System.Windows.Forms.TextBox();
@@ -70,7 +72,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartSort)).BeginInit();
@@ -88,7 +89,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 475);
+            this.tabControl1.Size = new System.Drawing.Size(845, 475);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage3
@@ -109,7 +110,7 @@
             this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(768, 446);
+            this.tabPage3.Size = new System.Drawing.Size(837, 446);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Сортировка слиянием";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -131,14 +132,15 @@
             this.chartSort.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartSort.Legends.Add(legend1);
-            this.chartSort.Location = new System.Drawing.Point(424, 112);
+            this.chartSort.Location = new System.Drawing.Point(399, 115);
             this.chartSort.Name = "chartSort";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.LegendText = "График времени сортировки от количества элементов";
+            series1.Name = "Graphic";
             this.chartSort.Series.Add(series1);
-            this.chartSort.Size = new System.Drawing.Size(320, 251);
+            this.chartSort.Size = new System.Drawing.Size(419, 251);
             this.chartSort.TabIndex = 12;
             this.chartSort.Text = "chart1";
             // 
@@ -262,7 +264,7 @@
             this.tabPage4.Controls.Add(this.groupBox1);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(768, 446);
+            this.tabPage4.Size = new System.Drawing.Size(837, 446);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Алгоритм выбора ближайших пар точек ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -283,14 +285,22 @@
             this.chartPoints.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chartPoints.Legends.Add(legend2);
-            this.chartPoints.Location = new System.Drawing.Point(424, 107);
+            this.chartPoints.Location = new System.Drawing.Point(381, 124);
             this.chartPoints.Name = "chartPoints";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.LegendText = "Остальные точки";
+            series2.Name = "Points";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series3.Color = System.Drawing.Color.Red;
+            series3.Legend = "Legend1";
+            series3.LegendText = "Точки с наименьшим расстоянием";
+            series3.Name = "Points2";
             this.chartPoints.Series.Add(series2);
-            this.chartPoints.Size = new System.Drawing.Size(306, 204);
+            this.chartPoints.Series.Add(series3);
+            this.chartPoints.Size = new System.Drawing.Size(444, 204);
             this.chartPoints.TabIndex = 12;
             this.chartPoints.Text = "chart2";
             // 
@@ -304,9 +314,9 @@
             this.groupBox2.Controls.Add(this.textBoxF2point);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Location = new System.Drawing.Point(11, 246);
+            this.groupBox2.Location = new System.Drawing.Point(11, 224);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(339, 187);
+            this.groupBox2.Size = new System.Drawing.Size(339, 209);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Данные из файла";
@@ -322,7 +332,7 @@
             // 
             // textBoxF1point
             // 
-            this.textBoxF1point.Location = new System.Drawing.Point(191, 107);
+            this.textBoxF1point.Location = new System.Drawing.Point(193, 134);
             this.textBoxF1point.Name = "textBoxF1point";
             this.textBoxF1point.ReadOnly = true;
             this.textBoxF1point.Size = new System.Drawing.Size(53, 22);
@@ -330,7 +340,7 @@
             // 
             // buttonFile
             // 
-            this.buttonFile.Location = new System.Drawing.Point(37, 70);
+            this.buttonFile.Location = new System.Drawing.Point(118, 64);
             this.buttonFile.Name = "buttonFile";
             this.buttonFile.Size = new System.Drawing.Size(75, 23);
             this.buttonFile.TabIndex = 2;
@@ -340,7 +350,7 @@
             // 
             // textBoxFDist
             // 
-            this.textBoxFDist.Location = new System.Drawing.Point(129, 151);
+            this.textBoxFDist.Location = new System.Drawing.Point(131, 178);
             this.textBoxFDist.Name = "textBoxFDist";
             this.textBoxFDist.ReadOnly = true;
             this.textBoxFDist.Size = new System.Drawing.Size(82, 22);
@@ -349,7 +359,7 @@
             // labelError
             // 
             this.labelError.AutoSize = true;
-            this.labelError.Location = new System.Drawing.Point(145, 73);
+            this.labelError.Location = new System.Drawing.Point(24, 103);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(80, 16);
             this.labelError.TabIndex = 3;
@@ -357,7 +367,7 @@
             // 
             // textBoxF2point
             // 
-            this.textBoxF2point.Location = new System.Drawing.Point(269, 107);
+            this.textBoxF2point.Location = new System.Drawing.Point(271, 134);
             this.textBoxF2point.Name = "textBoxF2point";
             this.textBoxF2point.ReadOnly = true;
             this.textBoxF2point.Size = new System.Drawing.Size(53, 22);
@@ -366,7 +376,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(24, 110);
+            this.label14.Location = new System.Drawing.Point(26, 137);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(161, 16);
             this.label14.TabIndex = 6;
@@ -375,7 +385,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(24, 154);
+            this.label13.Location = new System.Drawing.Point(26, 181);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(88, 16);
             this.label13.TabIndex = 7;
@@ -390,12 +400,21 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.buttonGenerate);
-            this.groupBox1.Location = new System.Drawing.Point(24, 31);
+            this.groupBox1.Location = new System.Drawing.Point(11, 18);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(326, 187);
+            this.groupBox1.Size = new System.Drawing.Size(339, 187);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Представление на графике";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 94);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(161, 16);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Пара ближайших точек:";
             // 
             // textBoxG1point
             // 
@@ -451,20 +470,11 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 94);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(161, 16);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Пара ближайших точек:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.ClientSize = new System.Drawing.Size(869, 487);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Разделяй и властвуй";

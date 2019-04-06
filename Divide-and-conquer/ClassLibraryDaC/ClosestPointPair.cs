@@ -85,6 +85,7 @@ namespace ClassLibraryDaC
             return Math.Round(MinDist,3);
         }
 
+
          
         /// <summary>
         /// Сортировка массива точек по x-координатам
@@ -207,7 +208,6 @@ namespace ClassLibraryDaC
                 } 
             } 
              
- 
         }    
     } 
 }

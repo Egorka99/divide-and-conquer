@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClassLibraryDaC
-{  
+{   
     
     public class MergeSort 
     {
@@ -21,7 +21,7 @@ namespace ClassLibraryDaC
             int mid_point = array.Length / 2;
             return Merge(Sort(array.Take(mid_point).ToArray()), Sort(array.Skip(mid_point).ToArray()));
         }
-
+         
         /// <summary>
         /// Разделение и сортировка двух массивов 
         /// </summary>

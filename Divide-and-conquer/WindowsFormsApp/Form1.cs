@@ -42,7 +42,7 @@ namespace WindowsFormsApp
             int id = 0;  
 
             for (int i = 0; i < arr.Length; i++)
-            {
+            { 
                 arr[i] = new PointId()  
                 {
                     x = rnd.Next(-10, 10),    
@@ -52,6 +52,9 @@ namespace WindowsFormsApp
                 id++;
 
             }
+
+            if (HasSamePoints(arr))
+                ;
              
             ClosestPointPair points = new ClosestPointPair(arr);
 
@@ -95,51 +98,82 @@ namespace WindowsFormsApp
         {
             List<PointId> output = new List<PointId>(); 
 
-            int FileLength = File.ReadAllLines(filename).Length;
+            int FileLength = File.ReadAllLines(filename).Length; 
 
             StreamReader sr = new StreamReader(filename);
 
             int id = 0; 
 
-            for (int i = 0; i < FileLength; i++) 
+            for (int i = 0; i < FileLength; i++)
             {
-               string[] buffer = sr.ReadLine().Split(' ');
-     
+                string[] buffer = sr.ReadLine().Split(' ');
+
                 output.Add(new PointId
                 {
                     x = int.Parse(buffer[0]),
-                    y = int.Parse(buffer[1]), 
+                    y = int.Parse(buffer[1]),
                     id = id
                 });
-                 
-                id++;  
+
+                id++;
             }
 
-            sr.Close(); 
+            sr.Close();  
+           
 
             return output.ToArray();    
 
         }  
-
+          
+        bool HasSamePoints(PointId[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    if (arr[i].x == arr[j].x && arr[i].y == arr[j].y)
+                        return true;  
+                }
+            }
+             
+            return false;  
+        } 
+         
         private void buttonFile_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
              
             string filename = openFileDialog1.FileName;
-             
-            PointId[] input = ConvertToPointId(filename);
 
-            ClosestPointPair points = new ClosestPointPair(input); 
+            try 
+            {
+                PointId[] input = ConvertToPointId(filename);
 
-            PointId[] AnswerXY = points.NearestPair();
-             
-            textBoxF1point.Text = "(" + AnswerXY[0].x + "," + AnswerXY[0].y + ")";
-            textBoxF2point.Text = "(" + AnswerXY[1].x + "," + AnswerXY[1].y + ")";
-            textBoxFDist.Text = points.MinDistance().ToString();
-            labelError.Text = filename; 
+                ClosestPointPair points = new ClosestPointPair(input); 
 
-        }
+                PointId[] AnswerXY = points.NearestPair();
+
+                if (HasSamePoints(input))
+                    throw new Exception("В файле содержатся одинаковые точки "); 
+
+                textBoxF1point.Text = "(" + AnswerXY[0].x + "," + AnswerXY[0].y + ")";
+                textBoxF2point.Text = "(" + AnswerXY[1].x + "," + AnswerXY[1].y + ")";
+                textBoxFDist.Text = points.MinDistance().ToString();
+                labelError.Text = filename; 
+            }
+            catch (IndexOutOfRangeException)
+            {
+                labelError.Text = "Файл содержит неверные данные";
+                labelError.ForeColor = Color.Red;
+            }
+            catch (Exception ex)    
+            {  
+                labelError.Text = ex.Message;
+                labelError.ForeColor = Color.Red; 
+            }
+            
+        } 
 
 
 
