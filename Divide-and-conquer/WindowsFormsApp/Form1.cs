@@ -116,13 +116,13 @@ namespace WindowsFormsApp
                 });
 
                 id++;
-            }
+            } 
 
             sr.Close();  
            
 
             return output.ToArray();    
-
+             
         }  
           
         bool HasSamePoints(PointId[] arr)
@@ -131,8 +131,9 @@ namespace WindowsFormsApp
             {
                 for (int j = 0; j < arr.Length; j++)
                 {
-                    if (arr[i].x == arr[j].x && arr[i].y == arr[j].y)
-                        return true;  
+                    if (arr[i].id != arr[j].id)
+                        if (arr[i].x == arr[j].x && arr[i].y == arr[j].y)
+                            return true;  
                 }
             }
              
