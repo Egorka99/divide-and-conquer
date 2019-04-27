@@ -92,8 +92,44 @@ namespace WindowsFormsApp
 
             chartSort.Series[0].Points.AddXY(Time, CountElements); 
              
-            return Time + "ms";  
-        }  
+            return Time + "ms";   
+        }
+
+        string GetDQ_CPPTime(int CountCalculation,ClosestPointPair input)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+
+            stopwatch.Start();
+
+            for (int i = 0; i < CountCalculation; i++)
+            {
+                input.MinDistance(); 
+            }
+              
+            stopwatch.Stop();
+
+            long Time = stopwatch.ElapsedMilliseconds; 
+
+            return Time + "ms";
+        }
+
+        string GetSimple_CPPTime(int CountCalculation, ClosestPointPair input)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+             
+            stopwatch.Start();  
+
+            for (int i = 0; i < CountCalculation; i++)
+            {
+                input.SimpleMinDistance();   
+            }
+
+            stopwatch.Stop();
+
+            long Time = stopwatch.ElapsedMilliseconds;
+
+            return Time + "ms";
+        }
 
         PointId[] ConvertToPointId(string filename)
         {
@@ -141,6 +177,8 @@ namespace WindowsFormsApp
             return false;  
         } 
          
+        
+
         private void buttonFile_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
@@ -152,7 +190,7 @@ namespace WindowsFormsApp
             {
                 PointId[] input = ConvertToPointId(filename);
 
-                ClosestPointPair points = new ClosestPointPair(input); 
+                ClosestPointPair points = new ClosestPointPair(input);  
 
                 PointId[] AnswerXY = points.NearestPair();
 
@@ -163,9 +201,22 @@ namespace WindowsFormsApp
                 textBoxF2point.Text = "(" + AnswerXY[1].x + "," + AnswerXY[1].y + ")";
                 textBoxFDist.Text = points.MinDistance().ToString();
                 labelError.Text = filename; 
-            }
-            catch (IndexOutOfRangeException)
-            {
+
+                //Подсчет времени  
+                labelCPP1_Time1.Text = GetSimple_CPPTime(10000,points); 
+                labelCPP1_Time2.Text = GetSimple_CPPTime(15000,points);  
+                labelCPP1_Time3.Text = GetSimple_CPPTime(20000,points); 
+                labelCPP1_Time4.Text = GetSimple_CPPTime(25000,points);
+                 
+                labelCPP2_Time1.Text = GetDQ_CPPTime(10000, points);
+                labelCPP2_Time2.Text = GetDQ_CPPTime(15000, points);
+                labelCPP2_Time3.Text = GetDQ_CPPTime(20000, points);
+                labelCPP2_Time4.Text = GetDQ_CPPTime(25000, points);
+
+
+            } 
+            catch (IndexOutOfRangeException)  
+            { 
                 labelError.Text = "Файл содержит неверные данные";
                 labelError.ForeColor = Color.Red;
             }

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.buttonCalculate = new System.Windows.Forms.Button();
@@ -77,6 +77,30 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label15 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.labelCPP1_Time4 = new System.Windows.Forms.Label();
+            this.labelCPP1_Time3 = new System.Windows.Forms.Label();
+            this.labelCPP1_Time2 = new System.Windows.Forms.Label();
+            this.labelCPP1_Time1 = new System.Windows.Forms.Label();
+            this.labelCPP2_Time4 = new System.Windows.Forms.Label();
+            this.labelCPP2_Time3 = new System.Windows.Forms.Label();
+            this.labelCPP2_Time2 = new System.Windows.Forms.Label();
+            this.labelCPP2_Time1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartSort)).BeginInit();
@@ -136,18 +160,18 @@
             // 
             // chartSort
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartSort.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartSort.Legends.Add(legend4);
+            chartArea3.Name = "ChartArea1";
+            this.chartSort.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartSort.Legends.Add(legend3);
             this.chartSort.Location = new System.Drawing.Point(399, 115);
             this.chartSort.Name = "chartSort";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Legend = "Legend1";
-            series6.LegendText = "График времени сортировки от количества элементов";
-            series6.Name = "Graphic";
-            this.chartSort.Series.Add(series6);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.LegendText = "График времени сортировки от количества элементов";
+            series4.Name = "Graphic";
+            this.chartSort.Series.Add(series4);
             this.chartSort.Size = new System.Drawing.Size(419, 251);
             this.chartSort.TabIndex = 12;
             this.chartSort.Text = "chart1";
@@ -266,10 +290,10 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label31);
             this.tabPage4.Controls.Add(this.groupBoxGraphic);
             this.tabPage4.Controls.Add(this.radioButton2);
             this.tabPage4.Controls.Add(this.radioButton1);
-            this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(837, 446);
@@ -299,11 +323,35 @@
             // 
             // panelF
             // 
-            this.panelF.BackColor = System.Drawing.Color.DimGray;
+            this.panelF.BackColor = System.Drawing.Color.Transparent;
+            this.panelF.Controls.Add(this.labelCPP2_Time4);
+            this.panelF.Controls.Add(this.labelCPP2_Time3);
+            this.panelF.Controls.Add(this.labelCPP2_Time2);
+            this.panelF.Controls.Add(this.labelCPP2_Time1);
+            this.panelF.Controls.Add(this.labelCPP1_Time4);
+            this.panelF.Controls.Add(this.labelCPP1_Time3);
+            this.panelF.Controls.Add(this.labelCPP1_Time2);
+            this.panelF.Controls.Add(this.labelCPP1_Time1);
+            this.panelF.Controls.Add(this.label29);
+            this.panelF.Controls.Add(this.label30);
+            this.panelF.Controls.Add(this.label27);
+            this.panelF.Controls.Add(this.label28);
+            this.panelF.Controls.Add(this.label23);
+            this.panelF.Controls.Add(this.label24);
+            this.panelF.Controls.Add(this.label25);
+            this.panelF.Controls.Add(this.label26);
+            this.panelF.Controls.Add(this.label22);
+            this.panelF.Controls.Add(this.label21);
+            this.panelF.Controls.Add(this.label20);
+            this.panelF.Controls.Add(this.label19);
+            this.panelF.Controls.Add(this.label17);
+            this.panelF.Controls.Add(this.label18);
+            this.panelF.Controls.Add(this.label16);
             this.panelF.Controls.Add(this.groupBox2);
+            this.panelF.Controls.Add(this.label15);
             this.panelF.Location = new System.Drawing.Point(3, 0);
             this.panelF.Name = "panelF";
-            this.panelF.Size = new System.Drawing.Size(816, 320);
+            this.panelF.Size = new System.Drawing.Size(828, 361);
             this.panelF.TabIndex = 17;
             // 
             // groupBox2
@@ -316,9 +364,9 @@
             this.groupBox2.Controls.Add(this.textBoxF2point);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Location = new System.Drawing.Point(219, 66);
+            this.groupBox2.Location = new System.Drawing.Point(202, 32);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(346, 178);
+            this.groupBox2.Size = new System.Drawing.Size(346, 218);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Данные из файла";
@@ -470,25 +518,25 @@
             // 
             // chartPoints
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartPoints.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartPoints.Legends.Add(legend3);
+            chartArea4.Name = "ChartArea1";
+            this.chartPoints.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartPoints.Legends.Add(legend4);
             this.chartPoints.Location = new System.Drawing.Point(358, 60);
             this.chartPoints.Name = "chartPoints";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series4.Legend = "Legend1";
-            series4.LegendText = "Остальные точки";
-            series4.Name = "Points";
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series5.Color = System.Drawing.Color.Red;
             series5.Legend = "Legend1";
-            series5.LegendText = "Точки с наименьшим расстоянием";
-            series5.Name = "Points2";
-            this.chartPoints.Series.Add(series4);
+            series5.LegendText = "Остальные точки";
+            series5.Name = "Points";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series6.Color = System.Drawing.Color.Red;
+            series6.Legend = "Legend1";
+            series6.LegendText = "Точки с наименьшим расстоянием";
+            series6.Name = "Points2";
             this.chartPoints.Series.Add(series5);
+            this.chartPoints.Series.Add(series6);
             this.chartPoints.Size = new System.Drawing.Size(444, 204);
             this.chartPoints.TabIndex = 12;
             this.chartPoints.Text = "chart2";
@@ -521,7 +569,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(699, 30);
+            this.label15.Location = new System.Drawing.Point(630, 32);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 20);
             this.label15.TabIndex = 13;
@@ -530,6 +578,228 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(568, 63);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(224, 16);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "Алгоритм \"Разделяй и властвуй\"";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(25, 63);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(139, 16);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Перебор всех точек";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(63, 32);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(56, 20);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "O(n^2)";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(15, 138);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(43, 16);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "10000";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(15, 180);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(43, 16);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "15000";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(15, 227);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(43, 16);
+            this.label21.TabIndex = 19;
+            this.label21.Text = "20000";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(15, 270);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(43, 16);
+            this.label22.TabIndex = 20;
+            this.label22.Text = "25000";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(570, 270);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(43, 16);
+            this.label23.TabIndex = 24;
+            this.label23.Text = "25000";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(570, 227);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(43, 16);
+            this.label24.TabIndex = 23;
+            this.label24.Text = "20000";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(570, 180);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(43, 16);
+            this.label25.TabIndex = 22;
+            this.label25.Text = "15000";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(570, 138);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(43, 16);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "10000";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Location = new System.Drawing.Point(106, 105);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(58, 20);
+            this.label27.TabIndex = 26;
+            this.label27.Text = "Время";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label28.Location = new System.Drawing.Point(23, 105);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(24, 20);
+            this.label28.TabIndex = 25;
+            this.label28.Text = "N ";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Location = new System.Drawing.Point(672, 105);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(58, 20);
+            this.label29.TabIndex = 28;
+            this.label29.Text = "Время";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label30.Location = new System.Drawing.Point(580, 105);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(24, 20);
+            this.label30.TabIndex = 27;
+            this.label30.Text = "N ";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label31.Location = new System.Drawing.Point(475, 30);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(218, 20);
+            this.label31.TabIndex = 17;
+            this.label31.Text = "N - количество вычислений";
+            // 
+            // labelCPP1_Time4
+            // 
+            this.labelCPP1_Time4.AutoSize = true;
+            this.labelCPP1_Time4.Location = new System.Drawing.Point(126, 270);
+            this.labelCPP1_Time4.Name = "labelCPP1_Time4";
+            this.labelCPP1_Time4.Size = new System.Drawing.Size(15, 16);
+            this.labelCPP1_Time4.TabIndex = 32;
+            this.labelCPP1_Time4.Text = "0";
+            // 
+            // labelCPP1_Time3
+            // 
+            this.labelCPP1_Time3.AutoSize = true;
+            this.labelCPP1_Time3.Location = new System.Drawing.Point(126, 227);
+            this.labelCPP1_Time3.Name = "labelCPP1_Time3";
+            this.labelCPP1_Time3.Size = new System.Drawing.Size(15, 16);
+            this.labelCPP1_Time3.TabIndex = 31;
+            this.labelCPP1_Time3.Text = "0";
+            // 
+            // labelCPP1_Time2
+            // 
+            this.labelCPP1_Time2.AutoSize = true;
+            this.labelCPP1_Time2.Location = new System.Drawing.Point(126, 180);
+            this.labelCPP1_Time2.Name = "labelCPP1_Time2";
+            this.labelCPP1_Time2.Size = new System.Drawing.Size(15, 16);
+            this.labelCPP1_Time2.TabIndex = 30;
+            this.labelCPP1_Time2.Text = "0";
+            // 
+            // labelCPP1_Time1
+            // 
+            this.labelCPP1_Time1.AutoSize = true;
+            this.labelCPP1_Time1.Location = new System.Drawing.Point(126, 140);
+            this.labelCPP1_Time1.Name = "labelCPP1_Time1";
+            this.labelCPP1_Time1.Size = new System.Drawing.Size(15, 16);
+            this.labelCPP1_Time1.TabIndex = 29;
+            this.labelCPP1_Time1.Text = "0";
+            // 
+            // labelCPP2_Time4
+            // 
+            this.labelCPP2_Time4.AutoSize = true;
+            this.labelCPP2_Time4.Location = new System.Drawing.Point(694, 270);
+            this.labelCPP2_Time4.Name = "labelCPP2_Time4";
+            this.labelCPP2_Time4.Size = new System.Drawing.Size(15, 16);
+            this.labelCPP2_Time4.TabIndex = 36;
+            this.labelCPP2_Time4.Text = "0";
+            // 
+            // labelCPP2_Time3
+            // 
+            this.labelCPP2_Time3.AutoSize = true;
+            this.labelCPP2_Time3.Location = new System.Drawing.Point(694, 227);
+            this.labelCPP2_Time3.Name = "labelCPP2_Time3";
+            this.labelCPP2_Time3.Size = new System.Drawing.Size(15, 16);
+            this.labelCPP2_Time3.TabIndex = 35;
+            this.labelCPP2_Time3.Text = "0";
+            // 
+            // labelCPP2_Time2
+            // 
+            this.labelCPP2_Time2.AutoSize = true;
+            this.labelCPP2_Time2.Location = new System.Drawing.Point(694, 180);
+            this.labelCPP2_Time2.Name = "labelCPP2_Time2";
+            this.labelCPP2_Time2.Size = new System.Drawing.Size(15, 16);
+            this.labelCPP2_Time2.TabIndex = 34;
+            this.labelCPP2_Time2.Text = "0";
+            // 
+            // labelCPP2_Time1
+            // 
+            this.labelCPP2_Time1.AutoSize = true;
+            this.labelCPP2_Time1.Location = new System.Drawing.Point(694, 138);
+            this.labelCPP2_Time1.Name = "labelCPP2_Time1";
+            this.labelCPP2_Time1.Size = new System.Drawing.Size(15, 16);
+            this.labelCPP2_Time1.TabIndex = 33;
+            this.labelCPP2_Time1.Text = "0";
             // 
             // Form1
             // 
@@ -549,6 +819,7 @@
             this.groupBoxGraphic.ResumeLayout(false);
             this.panelG.ResumeLayout(false);
             this.panelF.ResumeLayout(false);
+            this.panelF.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -602,6 +873,30 @@
         private System.Windows.Forms.GroupBox groupBoxGraphic;
         private System.Windows.Forms.Panel panelG;
         private System.Windows.Forms.Panel panelF;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label labelCPP2_Time4;
+        private System.Windows.Forms.Label labelCPP2_Time3;
+        private System.Windows.Forms.Label labelCPP2_Time2;
+        private System.Windows.Forms.Label labelCPP2_Time1;
+        private System.Windows.Forms.Label labelCPP1_Time4;
+        private System.Windows.Forms.Label labelCPP1_Time3;
+        private System.Windows.Forms.Label labelCPP1_Time2;
+        private System.Windows.Forms.Label labelCPP1_Time1;
     }
 }
 

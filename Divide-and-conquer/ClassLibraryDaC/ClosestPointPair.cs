@@ -85,8 +85,28 @@ namespace ClassLibraryDaC
             return Math.Round(MinDist,3);
         }
 
+        /// <summary>
+        /// Нахождение минимального расстояния между двумя точками простым алгоритмом 
+        /// </summary>
+        /// <returns></returns>
+        public double SimpleMinDistance()
+        {
 
-         
+            for (int i = 0; i < a.Length; i++)
+            {
+                for (int j = 0; j < a.Length; j++)
+                { 
+                    if (a[i].id != a[j].id)
+                        CalculateDist(a[i],a[j]);
+                }
+            }
+             
+            return Math.Round(MinDist, 3);
+        }
+
+
+
+
         /// <summary>
         /// Сортировка массива точек по x-координатам
         /// </summary>
@@ -210,4 +230,5 @@ namespace ClassLibraryDaC
              
         }    
     } 
-}
+
+}  
