@@ -122,7 +122,7 @@ namespace WindowsFormsApp
            
 
             return output.ToArray();    
-             
+              
         }  
           
         bool HasSamePoints(PointId[] arr)
