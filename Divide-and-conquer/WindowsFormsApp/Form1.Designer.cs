@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.buttonCalculate = new System.Windows.Forms.Button();
@@ -53,7 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
-            this.chartPoints = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxF1point = new System.Windows.Forms.TextBox();
@@ -65,6 +64,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.chartPoints = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.textBoxG1point = new System.Windows.Forms.TextBox();
             this.textBoxGDist = new System.Windows.Forms.TextBox();
             this.textBoxG2point = new System.Windows.Forms.TextBox();
@@ -72,13 +72,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartSort)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartPoints)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPoints)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -128,18 +130,18 @@
             // 
             // chartSort
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartSort.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartSort.Legends.Add(legend1);
+            chartArea8.Name = "ChartArea1";
+            this.chartSort.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chartSort.Legends.Add(legend8);
             this.chartSort.Location = new System.Drawing.Point(399, 115);
             this.chartSort.Name = "chartSort";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.LegendText = "График времени сортировки от количества элементов";
-            series1.Name = "Graphic";
-            this.chartSort.Series.Add(series1);
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series12.Legend = "Legend1";
+            series12.LegendText = "График времени сортировки от количества элементов";
+            series12.Name = "Graphic";
+            this.chartSort.Series.Add(series12);
             this.chartSort.Size = new System.Drawing.Size(419, 251);
             this.chartSort.TabIndex = 12;
             this.chartSort.Text = "chart1";
@@ -258,6 +260,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.radioButton2);
+            this.tabPage4.Controls.Add(this.radioButton1);
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Controls.Add(this.chartPoints);
             this.tabPage4.Controls.Add(this.groupBox2);
@@ -273,36 +277,11 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(539, 31);
+            this.label15.Location = new System.Drawing.Point(699, 30);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 20);
             this.label15.TabIndex = 13;
             this.label15.Text = " \tO(n log2 n)";
-            // 
-            // chartPoints
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chartPoints.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartPoints.Legends.Add(legend2);
-            this.chartPoints.Location = new System.Drawing.Point(381, 124);
-            this.chartPoints.Name = "chartPoints";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series2.Legend = "Legend1";
-            series2.LegendText = "Остальные точки";
-            series2.Name = "Points";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series3.Color = System.Drawing.Color.Red;
-            series3.Legend = "Legend1";
-            series3.LegendText = "Точки с наименьшим расстоянием";
-            series3.Name = "Points2";
-            this.chartPoints.Series.Add(series2);
-            this.chartPoints.Series.Add(series3);
-            this.chartPoints.Size = new System.Drawing.Size(444, 204);
-            this.chartPoints.TabIndex = 12;
-            this.chartPoints.Text = "chart2";
             // 
             // groupBox2
             // 
@@ -314,12 +293,13 @@
             this.groupBox2.Controls.Add(this.textBoxF2point);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Location = new System.Drawing.Point(11, 224);
+            this.groupBox2.Location = new System.Drawing.Point(247, 115);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(339, 209);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Данные из файла";
+            this.groupBox2.Visible = false;
             // 
             // label11
             // 
@@ -400,7 +380,7 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.buttonGenerate);
-            this.groupBox1.Location = new System.Drawing.Point(11, 18);
+            this.groupBox1.Location = new System.Drawing.Point(23, 120);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(339, 187);
             this.groupBox1.TabIndex = 0;
@@ -415,6 +395,31 @@
             this.label12.Size = new System.Drawing.Size(161, 16);
             this.label12.TabIndex = 7;
             this.label12.Text = "Пара ближайших точек:";
+            // 
+            // chartPoints
+            // 
+            chartArea7.Name = "ChartArea1";
+            this.chartPoints.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chartPoints.Legends.Add(legend7);
+            this.chartPoints.Location = new System.Drawing.Point(379, 120);
+            this.chartPoints.Name = "chartPoints";
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series10.Legend = "Legend1";
+            series10.LegendText = "Остальные точки";
+            series10.Name = "Points";
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series11.Color = System.Drawing.Color.Red;
+            series11.Legend = "Legend1";
+            series11.LegendText = "Точки с наименьшим расстоянием";
+            series11.Name = "Points2";
+            this.chartPoints.Series.Add(series10);
+            this.chartPoints.Series.Add(series11);
+            this.chartPoints.Size = new System.Drawing.Size(444, 204);
+            this.chartPoints.TabIndex = 12;
+            this.chartPoints.Text = "chart2";
             // 
             // textBoxG1point
             // 
@@ -470,6 +475,30 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog";
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(49, 32);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(208, 20);
+            this.radioButton1.TabIndex = 14;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Представление на графике";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(275, 31);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(141, 20);
+            this.radioButton2.TabIndex = 15;
+            this.radioButton2.Text = "Данные из файла";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,11 +513,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartSort)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartPoints)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPoints)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -532,6 +561,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 
