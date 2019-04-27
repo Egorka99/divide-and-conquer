@@ -15,9 +15,15 @@ namespace WindowsFormsApp
             InitializeComponent();
 
             openFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
-
+             
         } 
-         
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            panelG.Show();
+            panelF.Hide(); 
+        }  
+
         int[] GenerateArray(int Length) 
         {
             int[] array = new int[Length];  
@@ -189,29 +195,22 @@ namespace WindowsFormsApp
         {
             chartPoints.Series[0].Points.Clear();
 
-            ChartOut(); 
+            ChartOut();  
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
-            {
-                chartPoints.Visible = true; 
-                groupBox1.Visible = true;
-                groupBox2.Visible = false;
-            }
-
+            panelG.Show();
+            panelF.Hide(); 
+              
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton2.Checked)
-            { 
-                groupBox2.Visible = true;
-                chartPoints.Visible = false;
-                groupBox1.Visible = false;
-            }
+            panelF.Show();   
+            panelG.Hide(); 
         }
-    }      
+
+    }        
 }   
    

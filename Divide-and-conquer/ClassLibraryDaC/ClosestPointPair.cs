@@ -56,7 +56,7 @@ namespace ClassLibraryDaC
         /// </summary>
         /// <returns></returns>
         public PointId[] NearestPair() 
-        {
+        { 
             List<PointId> NearestPair = new List<PointId>(); 
 
             SortByX(a, 0 ,a.Length - 1); 
