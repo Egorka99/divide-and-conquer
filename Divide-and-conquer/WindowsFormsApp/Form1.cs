@@ -200,17 +200,16 @@ namespace WindowsFormsApp
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            panelG.Show();
-            panelF.Hide(); 
-              
+            panelG.Visible = true;
+            panelF.Visible = false;  
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            panelF.Show();   
-            panelG.Hide(); 
+            panelG.Visible = false;
+            panelF.Visible = true;
         }
 
-    }        
+    }         
 }   
    
