@@ -100,7 +100,7 @@ namespace WindowsFormsApp
             Stopwatch stopwatch = new Stopwatch();
 
             stopwatch.Start();
-
+             
             for (int i = 0; i < CountCalculation; i++)
             {
                 input.MinDistance(); 
@@ -212,7 +212,7 @@ namespace WindowsFormsApp
                 labelCPP2_Time2.Text = GetDQ_CPPTime(15000, points);
                 labelCPP2_Time3.Text = GetDQ_CPPTime(20000, points);
                 labelCPP2_Time4.Text = GetDQ_CPPTime(25000, points);
-
+                 
 
             } 
             catch (IndexOutOfRangeException)  

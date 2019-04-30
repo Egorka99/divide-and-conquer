@@ -111,7 +111,7 @@ namespace ClassLibraryDaC
         /// Сортировка массива точек по x-координатам
         /// </summary>
         /// <param name="a"></param>
-        /// <param name="first"></param>
+        /// <param name="first"></param> 
         /// <param name="last"></param> 
         /// <returns></returns>
         private static PointId[] SortByX(PointId[] a, int first, int last)
