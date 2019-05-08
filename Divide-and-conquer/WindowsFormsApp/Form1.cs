@@ -24,7 +24,7 @@ namespace WindowsFormsApp
             panelF.Hide(); 
         }  
 
-        int[] GenerateArray(int Length) 
+        int[] GenerateArray(int Length)  
         {
             int[] array = new int[Length];  
             Random rand = new Random();
@@ -36,32 +36,32 @@ namespace WindowsFormsApp
          
         void ChartOut()
         {
-            PointId[] arr = new PointId[5]; 
+            List<PointId> arr = new List<PointId>(); 
 
-            Random rnd = new Random();
+            Random rnd = new Random(); 
              
             int id = 0;  
 
-            for (int i = 0; i < arr.Length; i++)
-            { 
-                arr[i] = new PointId()  
+            for (int i = 0; i < 5; i++)
+            {  
+                arr.Add(new PointId()  
                 {
                     x = rnd.Next(-10, 10),    
                     y = rnd.Next(-10, 10),  
                     id = id
-                };  
+                });   
                 id++;
 
             }
              
             ClosestPointPair points = new ClosestPointPair(arr);
 
-            PointId[] AnswerXY = points.NearestPair();
-
-            for (int i = 0; i < arr.Length; i++) 
+            List<PointId> AnswerXY = points.NearestPair(); 
+             
+            for (int i = 0; i < arr.Count; i++)   
             {
                 chartPoints.Series[0].Points.AddXY(arr[i].y, arr[i].x); 
-                for (int j = 0; j < AnswerXY.Length; j++)
+                for (int j = 0; j < AnswerXY.Count; j++)
                 {
                     if (arr[i].x == AnswerXY[j].x && arr[i].y == AnswerXY[j].y)
                         chartPoints.Series[0].Points[i].Color = Color.Red;
@@ -128,7 +128,7 @@ namespace WindowsFormsApp
             return Time + "ms";
         }
 
-        PointId[] ConvertToPointId(string filename)
+        List<PointId> ConvertToPointId(string filename)
         {
             List<PointId> output = new List<PointId>(); 
 
@@ -136,7 +136,7 @@ namespace WindowsFormsApp
 
             StreamReader sr = new StreamReader(filename);
 
-            int id = 0; 
+            int id = 0;  
 
             for (int i = 0; i < FileLength; i++)
             {
@@ -152,18 +152,18 @@ namespace WindowsFormsApp
                 id++;
             } 
 
-            sr.Close();  
+            sr.Close();   
            
 
-            return output.ToArray();    
+            return output;    
               
         }  
           
-        bool HasSamePoints(PointId[] arr)
+        bool HasSamePoints(List<PointId> arr)
         {
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arr.Count; i++)
             {
-                for (int j = 0; j < arr.Length; j++)
+                for (int j = 0; j < arr.Count; j++)
                 {
                     if (arr[i].id != arr[j].id)
                         if (arr[i].x == arr[j].x && arr[i].y == arr[j].y)
@@ -185,11 +185,11 @@ namespace WindowsFormsApp
 
             try 
             {
-                PointId[] input = ConvertToPointId(filename);
+                List<PointId> input = ConvertToPointId(filename);
 
                 ClosestPointPair points = new ClosestPointPair(input);    
 
-                PointId[] AnswerXY = points.NearestPair();
+                List<PointId> AnswerXY = points.NearestPair();
 
                 if (HasSamePoints(input))
                     throw new Exception("В файле содержатся одинаковые точки "); 

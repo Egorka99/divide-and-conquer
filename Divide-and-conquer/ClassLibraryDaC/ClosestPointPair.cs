@@ -13,14 +13,14 @@ namespace ClassLibraryDaC
     public struct PointId
     {
         public int x, y, id;
-    } 
+    }
 
     public class ClosestPointPair
     {
         /// <summary> 
         /// Максимальное количество точек
         /// </summary>
-        const int MAXN = 20; 
+        const int MAXN = 20;
 
         /// <summary> 
         /// Минимальная дистанция между двумя точками
@@ -36,41 +36,41 @@ namespace ClassLibraryDaC
         /// Номер второй точки с минимальной дистанцией 
         /// </summary>
         static int AnswerB;
-         
+
 
         /// <summary>  
         /// Массив точек   
-        /// </summary>  
-        public PointId[] a;
+        /// </summary>   
+        List<PointId> a; 
 
-        public ClosestPointPair(PointId[] A)
+        public ClosestPointPair(List<PointId> A)
         {
             MinDist = 1e20;
   
             a = A; 
+             
+        }
 
-        } 
-         
         /// <summary>
-        /// Нахождение двух ближайших пар точек 
+        /// Нахождение двух ближайших пар точек  
         /// </summary>
         /// <returns></returns>
-        public PointId[] NearestPair() 
+        public List<PointId> NearestPair()  
         { 
             List<PointId> NearestPair = new List<PointId>(); 
 
-            SortByX(a, 0 ,a.Length - 1); 
-            Rec(0, a.Length - 1);   
+            SortByX(a, 0 ,a.Count - 1); 
+            Rec(0, a.Count - 1);   
 
-            for (int i = 0; i < a.Length; i++)
+            for (int i = 0; i < a.Count; i++)
             {
                  if ((a[i].id == AnswerA) || (a[i].id == AnswerB))
                  {
                     NearestPair.Add(a[i]);
                  } 
             } 
-
-            return NearestPair.ToArray(); 
+             
+            return NearestPair; 
         }
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace ClassLibraryDaC
         /// <returns></returns>
         public double MinDistance()  
         {
-            SortByX(a, 0, a.Length - 1); 
-            Rec(0, a.Length - 1);
+            SortByX(a, 0, a.Count - 1); 
+            Rec(0, a.Count - 1); 
                
             return Math.Round(MinDist,3);
         }
@@ -92,9 +92,9 @@ namespace ClassLibraryDaC
         public double SimpleMinDistance()
         {
 
-            for (int i = 0; i < a.Length; i++)
+            for (int i = 0; i < a.Count; i++)
             {
-                for (int j = 0; j < a.Length; j++)
+                for (int j = 0; j < a.Count; j++)
                 { 
                     if (a[i].id != a[j].id)
                         CalculateDist(a[i],a[j]);
@@ -111,31 +111,27 @@ namespace ClassLibraryDaC
         /// <param name="first"></param> 
         /// <param name="last"></param> 
         /// <returns></returns>
-        private static PointId[] SortByX(PointId[] a, int first, int last)
+        private static List<PointId> SortByX(List<PointId> a, int first, int last)
         {
-            List<PointId> OrderedArr = a.ToList();  // список для сортировки 
+            a.Skip(first).Take(last).OrderBy(arr => arr.x).Select(s => s);
 
-            OrderedArr.Skip(first).Take(last).OrderBy(arr => arr.x).Select(s => s);
+            return a;     
+        }
 
-            return OrderedArr.ToArray(); // преобразововаем в массив   
+        /// <summary>
+        /// Сортировка массива точек по y-координатам
+        /// </summary>
+        /// <param name="a"></param>  
+        /// <param name="first"></param> 
+        /// <param name="last"></param> 
+        /// <returns></returns>
+        private static List<PointId> SortByY(List<PointId> a, int first, int last)
+        {
+            a.Skip(first).Take(last).OrderBy(arr => arr.y).Select(s => s);
+
+            return a;  
         } 
 
-        /// <summary> 
-        /// Сортировка массива точек по y-координатам 
-        /// </summary>  
-        /// <param name="a"></param> 
-        /// <param name="first"></param>  
-        /// <param name="last"></param>
-        /// <returns></returns>
-        private static PointId[] SortByY(PointId[] a, int first, int last)
-        {
-            List<PointId> OrderedArr = a.ToList();  // список для сортировки 
-
-            OrderedArr.Skip(first).Take(last).OrderBy(arr => arr.y).Select(s => s);
-
-            return OrderedArr.ToArray(); // преобразововаем в массив   
-        }
-         
 
         /// <summary>
         /// Вычисление расстояния между точками  
@@ -151,7 +147,7 @@ namespace ClassLibraryDaC
             {
                 MinDist = Dist;  
                 AnswerA = a.id; 
-                AnswerB = b.id;
+                AnswerB = b.id; 
             }
                
         } 
@@ -170,14 +166,14 @@ namespace ClassLibraryDaC
             { 
                 for (int i = l; i <= r; ++i) 
                     for (int j = i + 1; j <= r; ++j)    
-                        CalculateDist(a[i], a[j]);
+                        CalculateDist(a[i], a[j]); 
                  
                 SortByY(a, l, r + 1); 
                 return;
             }
 
             // PointId[] B = new PointId[MAXN]; // B = {Pi| |Xi - midx| < Mindist}
-            List<PointId> b = new List<PointId>(); 
+            List<PointId> B = new List<PointId>(); 
                
             int mid = l + r / 2; // индекс середины массива 
             int midx = a[mid].x;   // x-координата середины массива 
@@ -187,24 +183,22 @@ namespace ClassLibraryDaC
 
 
             // заполняем B 
-            for (int i = 0; i < a.Length; i++)
+            for (int i = 0; i < a.Count; i++)
             {
                 // множество точек B = {Pi| |Xi - midx| < Mindist} 
                 if (Math.Abs(a[i].x - midx) < MinDist)
                 { 
-                    b.Add(a[i]); 
+                    B.Add(a[i]); 
                 }
             }
-
-            PointId[] B = b.ToArray(); 
-             
+               
             // сортируем     
-            SortByY(B, 0, B.Length);
+            SortByY(B, 0, B.Count);
 
             // сравниваем все точки B, каждую с каждой, выделяем множество С(Pi) для каждой точки, считаем расстояние 
-            for (int i = 0; i < B.Length; i++)
+            for (int i = 0; i < B.Count; i++)
             {
-                for (int j = 0; j < B.Length; j++)
+                for (int j = 0; j < B.Count; j++)
                 {
                     // C(Pi) = {Pj | Pj (- B, Yi - Mindist < Yj <= Yi} 
                     if (B[i].y - MinDist < B[j].y && B[j].y <= B[i].y)

@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ClassLibraryDaC; 
+using ClassLibraryDaC;
+using System.Collections.Generic; 
 
 namespace UnitTestProject
 {
@@ -11,12 +12,12 @@ namespace UnitTestProject
         public void TestMethod1()  
         {
 
-            PointId[] Arr = new PointId[] {
+            List<PointId> Arr = new List<PointId> {
 
                  new PointId() { x = -4, y = 3, id = 0 },
                  new PointId() { x = -4, y = -3, id = 1 },
                  new PointId() { x = 0, y = 0, id = 2 },
-                 new PointId() { x = 1, y = -1, id = 3 },
+                 new PointId() { x = 1, y = -1, id = 3 }, 
                  new PointId() { x = 1, y = 3, id = 4 },
                  new PointId() { x = 5, y = -3, id = 5 },
             };
@@ -32,17 +33,17 @@ namespace UnitTestProject
         public void TestMethod2()
         {
 
-            PointId[] Arr = new PointId[] {
+            List<PointId> Arr = new List<PointId> {
 
                  new PointId() { x = -4, y = 3, id = 0 },
                  new PointId() { x = -4, y = -3, id = 1 },
                  new PointId() { x = 0, y = 0, id = 2 },
                  new PointId() { x = 1, y = -1, id = 3 },
-                 new PointId() { x = 1, y = 3, id = 4 },
+                 new PointId() { x = 1, y = 3, id = 4 }, 
                  new PointId() { x = 5, y = -3, id = 5 },
             };
 
-            ClosestPointPair points = new ClosestPointPair(Arr);
+            ClosestPointPair points = new ClosestPointPair(Arr); 
 
             double MinDist = points.MinDistance();
 
@@ -53,7 +54,7 @@ namespace UnitTestProject
         public void TestMethod3()
         {
 
-            PointId[] Arr = new PointId[] {
+            List<PointId> Arr = new List<PointId> {
 
                  new PointId() { x = 3, y = 6, id = 0 },
                  new PointId() { x = -5, y = 5, id = 1 },
@@ -78,7 +79,7 @@ namespace UnitTestProject
         public void TestMethod4()
         { 
 
-            PointId[] Arr = new PointId[] {
+            List<PointId> Arr = new List<PointId> {
 
                  new PointId() { x = -3, y = -10, id = 0 },
                  new PointId() { x = -7, y = 4, id = 1 },
@@ -99,12 +100,12 @@ namespace UnitTestProject
         public void TestMethod5() 
         {
 
-            PointId[] Arr = new PointId[] {
+            List<PointId> Arr = new List<PointId> {
 
                  new PointId() { x = 2, y = 3, id = 0 },
                  new PointId() { x = 2, y = 2, id = 1 },
                  new PointId() { x = -3, y = 3, id = 2 },
-                 new PointId() { x = 7, y = 1, id = 3 }, 
+                 new PointId() { x = 7, y = 1, id = 3 },  
                  new PointId() { x = 3, y = 3, id = 4 },
 
             };
@@ -120,7 +121,7 @@ namespace UnitTestProject
         public void TestMethod6()
         {
 
-            PointId[] Arr = new PointId[] {
+            List<PointId> Arr = new List<PointId>() {
 
                  new PointId() { x = 0, y = 0, id = 0 },
                  new PointId() { x = 0, y = 2, id = 1 },
@@ -130,17 +131,17 @@ namespace UnitTestProject
             };
 
             ClosestPointPair points = new ClosestPointPair(Arr);
-
+             
             double MinDist = points.MinDistance();
 
             Assert.AreEqual(1, MinDist);
-        }
+        } 
          
-        [TestMethod]
+        [TestMethod] 
         public void TestMethod7()
         {
 
-            PointId[] Arr = new PointId[] {
+            List<PointId> Arr = new List<PointId> {
 
                  new PointId() { x = 1, y = -1, id = 0 },
                  new PointId() { x = -1, y = 3, id = 1 }, 
@@ -161,7 +162,7 @@ namespace UnitTestProject
         public void TestMethod8()   
         { 
               
-            PointId[] Arr = new PointId[] { 
+            List<PointId> Arr = new List<PointId> { 
 
                  new PointId() { x = 0, y = -1, id = 1 },
                  new PointId() { x = -3, y = 5, id = 2 },
@@ -181,7 +182,7 @@ namespace UnitTestProject
         public void TestMethod9()
         {
 
-            PointId[] Arr = new PointId[] {
+            List<PointId> Arr = new List<PointId> {
 
                  new PointId() { x = 0, y = 1, id = 0 },
                  new PointId() { x = 0, y = 2, id = 1 },
@@ -201,7 +202,7 @@ namespace UnitTestProject
         public void TestMethod10() 
         {
               
-            PointId[] Arr = new PointId[] {
+            List<PointId> Arr = new List<PointId> {
 
                  new PointId() { x = 0, y = 3, id = 0 },
                  new PointId() { x = 1, y = 2, id = 1 },
