@@ -22,7 +22,7 @@ namespace UnitTestProject
             };
              
             ClosestPointPair points = new ClosestPointPair(Arr);
-
+             
             double MinDist = points.MinDistance(); 
              
             Assert.AreEqual(1.414, MinDist);  
@@ -71,9 +71,155 @@ namespace UnitTestProject
 
             double MinDist = points.MinDistance();
 
-            Assert.AreEqual(1, MinDist); 
+            Assert.AreEqual(1, MinDist);
         }
+
+        [TestMethod]
+        public void TestMethod4()
+        { 
+
+            PointId[] Arr = new PointId[] {
+
+                 new PointId() { x = -3, y = -10, id = 0 },
+                 new PointId() { x = -7, y = 4, id = 1 },
+                 new PointId() { x = 6, y = 8, id = 2 },
+                 new PointId() { x = -5, y = 5, id = 3 },
+                 new PointId() { x = -8, y = -7, id = 4 }, 
+
+            };
+
+            ClosestPointPair points = new ClosestPointPair(Arr);
+
+            double MinDist = points.MinDistance();
+
+            Assert.AreEqual(2.263, MinDist);
+        }
+
+        [TestMethod]
+        public void TestMethod5() 
+        {
+
+            PointId[] Arr = new PointId[] {
+
+                 new PointId() { x = 2, y = 3, id = 0 },
+                 new PointId() { x = 2, y = 2, id = 1 },
+                 new PointId() { x = -3, y = 3, id = 2 },
+                 new PointId() { x = 7, y = 1, id = 3 }, 
+                 new PointId() { x = 3, y = 3, id = 4 },
+
+            };
+
+            ClosestPointPair points = new ClosestPointPair(Arr);
+
+            double MinDist = points.MinDistance();
+
+            Assert.AreEqual(1, MinDist);
+        }
+
+        [TestMethod]
+        public void TestMethod6()
+        {
+
+            PointId[] Arr = new PointId[] {
+
+                 new PointId() { x = 0, y = 0, id = 0 },
+                 new PointId() { x = 0, y = 2, id = 1 },
+                 new PointId() { x = 0, y = 3, id = 2 },
+                 new PointId() { x = 0, y = 4, id = 3 },  
+
+            };
+
+            ClosestPointPair points = new ClosestPointPair(Arr);
+
+            double MinDist = points.MinDistance();
+
+            Assert.AreEqual(1, MinDist);
+        }
+         
+        [TestMethod]
+        public void TestMethod7()
+        {
+
+            PointId[] Arr = new PointId[] {
+
+                 new PointId() { x = 1, y = -1, id = 0 },
+                 new PointId() { x = -1, y = 3, id = 1 }, 
+                 new PointId() { x = -6, y = 6, id = 2 },
+                 new PointId() { x = 5, y = -6, id = 3 },
+                 new PointId() { x = 0, y = 1, id = 4 },
+
+            }; 
+
+            ClosestPointPair points = new ClosestPointPair(Arr);
+
+            double MinDist = points.MinDistance();
+             
+            Assert.AreEqual(2.236, MinDist); 
+        }
+
+        [TestMethod]
+        public void TestMethod8()   
+        { 
+              
+            PointId[] Arr = new PointId[] { 
+
+                 new PointId() { x = 0, y = -1, id = 1 },
+                 new PointId() { x = -3, y = 5, id = 2 },
+                 new PointId() { x = 1, y = 2, id = 3 },
+                 new PointId() { x = 4, y = -3, id = 4 },
+
+            }; 
+
+            ClosestPointPair points = new ClosestPointPair(Arr);
+
+            double MinDist = points.MinDistance();
+             
+            Assert.AreEqual(3.162, MinDist);
+        }
+          
+        [TestMethod]
+        public void TestMethod9()
+        {
+
+            PointId[] Arr = new PointId[] {
+
+                 new PointId() { x = 0, y = 1, id = 0 },
+                 new PointId() { x = 0, y = 2, id = 1 },
+                 new PointId() { x = -1, y = 2, id = 2 },
+                 new PointId() { x = 1, y = 2, id = 3 },
+
+            };
+
+            ClosestPointPair points = new ClosestPointPair(Arr);
+
+            double MinDist = points.MinDistance();
+
+            Assert.AreEqual(1, MinDist);
+        }
+
+        [TestMethod]
+        public void TestMethod10() 
+        {
+              
+            PointId[] Arr = new PointId[] {
+
+                 new PointId() { x = 0, y = 3, id = 0 },
+                 new PointId() { x = 1, y = 2, id = 1 },
+                 new PointId() { x = -3, y = 6, id = 2 },
+                 new PointId() { x = 4, y = 0, id = 3 },
+
+            };
+
+            ClosestPointPair points = new ClosestPointPair(Arr);
+
+            double MinDist = points.MinDistance();
+
+            Assert.AreEqual(1.414, MinDist);
+        }
+
+
 
 
     }
 }     
+ 

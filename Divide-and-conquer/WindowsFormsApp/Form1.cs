@@ -33,7 +33,7 @@ namespace WindowsFormsApp
 
             return array;   
         }
-
+         
         void ChartOut()
         {
             PointId[] arr = new PointId[5]; 
@@ -49,13 +49,10 @@ namespace WindowsFormsApp
                     x = rnd.Next(-10, 10),    
                     y = rnd.Next(-10, 10),  
                     id = id
-                }; 
+                };  
                 id++;
 
             }
-
-            if (HasSamePoints(arr))
-                ;
              
             ClosestPointPair points = new ClosestPointPair(arr);
 
@@ -190,7 +187,7 @@ namespace WindowsFormsApp
             {
                 PointId[] input = ConvertToPointId(filename);
 
-                ClosestPointPair points = new ClosestPointPair(input);  
+                ClosestPointPair points = new ClosestPointPair(input);    
 
                 PointId[] AnswerXY = points.NearestPair();
 
@@ -199,12 +196,12 @@ namespace WindowsFormsApp
 
                 textBoxF1point.Text = "(" + AnswerXY[0].x + "," + AnswerXY[0].y + ")";
                 textBoxF2point.Text = "(" + AnswerXY[1].x + "," + AnswerXY[1].y + ")";
-                textBoxFDist.Text = points.MinDistance().ToString();
+                textBoxFDist.Text = points.SimpleMinDistance().ToString();
                 labelError.Text = filename; 
-
+                  
                 //Подсчет времени  
                 labelCPP1_Time1.Text = GetSimple_CPPTime(10000,points); 
-                labelCPP1_Time2.Text = GetSimple_CPPTime(15000,points);  
+                labelCPP1_Time2.Text = GetSimple_CPPTime(15000,points);   
                 labelCPP1_Time3.Text = GetSimple_CPPTime(20000,points); 
                 labelCPP1_Time4.Text = GetSimple_CPPTime(25000,points);
                  
@@ -240,7 +237,7 @@ namespace WindowsFormsApp
             label1Time4.Text = GetSortTime(25000);
 
    
-        }
+        } 
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {

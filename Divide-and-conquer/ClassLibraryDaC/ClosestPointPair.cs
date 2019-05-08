@@ -102,10 +102,7 @@ namespace ClassLibraryDaC
             }
              
             return Math.Round(MinDist, 3);
-        }
-
-
-
+        } 
 
         /// <summary>
         /// Сортировка массива точек по x-координатам
@@ -116,39 +113,29 @@ namespace ClassLibraryDaC
         /// <returns></returns>
         private static PointId[] SortByX(PointId[] a, int first, int last)
         {
-            List<PointId> OrderedArr = new List<PointId>(); // список для сортировки 
+            List<PointId> OrderedArr = a.ToList();  // список для сортировки 
 
-            for (int i = first; i < last; i++) // заполняем список из входящего массива
-            {  
-                OrderedArr.Add(a[i]);    
-            }
-             
-            OrderedArr = a.OrderBy(arr => arr.x).ToList(); // сортируем 
+            OrderedArr.Skip(first).Take(last).OrderBy(arr => arr.x).Select(s => s);
 
-            return OrderedArr.ToArray(); // преобразововаем в массив 
+            return OrderedArr.ToArray(); // преобразововаем в массив   
         } 
 
         /// <summary> 
         /// Сортировка массива точек по y-координатам 
         /// </summary>  
-        /// <param name="a"></param>
-        /// <param name="first"></param>
+        /// <param name="a"></param> 
+        /// <param name="first"></param>  
         /// <param name="last"></param>
         /// <returns></returns>
         private static PointId[] SortByY(PointId[] a, int first, int last)
         {
-            List<PointId> OrderedArr = new List<PointId>(); // список для сортировки 
+            List<PointId> OrderedArr = a.ToList();  // список для сортировки 
 
-            for (int i = first; i < last; i++) // заполняем список из входящего массива
-            {
-                OrderedArr.Add(a[i]); 
-            }
+            OrderedArr.Skip(first).Take(last).OrderBy(arr => arr.y).Select(s => s);
 
-            OrderedArr = OrderedArr.OrderBy(arr => arr.y).ToList(); // сортируем 
-
-            return OrderedArr.ToArray(); // преобразововаем в массив
+            return OrderedArr.ToArray(); // преобразововаем в массив   
         }
-
+         
 
         /// <summary>
         /// Вычисление расстояния между точками  
