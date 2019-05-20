@@ -155,7 +155,7 @@ namespace UnitTestProject
 
             double MinDist = points.MinDistance();
              
-            Assert.AreEqual(2.236, MinDist); 
+            Assert.AreEqual(2.236, MinDist);  
         }
 
         [TestMethod]
@@ -222,5 +222,15 @@ namespace UnitTestProject
 
 
     }
+
+    [TestClass]
+    public class IterSort
+    {
+        [TestMethod]
+        public void TestMethod1()
+        {
+
+        } 
+    } 
 }     
- 
+  

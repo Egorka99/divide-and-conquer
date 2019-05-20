@@ -80,8 +80,8 @@ namespace WindowsFormsApp
             Stopwatch stopwatch = new Stopwatch();
 
             stopwatch.Start(); 
-
-            MergeSort.Sort(GenerateArray(CountElements)); 
+             
+            MergeSort.RecSort(GenerateArray(CountElements)); 
 
             stopwatch.Stop();
 
@@ -191,14 +191,14 @@ namespace WindowsFormsApp
 
                 List<PointId> AnswerXY = points.NearestPair();
 
-                if (HasSamePoints(input))
+                if (HasSamePoints(input)) 
                     throw new Exception("В файле содержатся одинаковые точки "); 
 
                 textBoxF1point.Text = "(" + AnswerXY[0].x + "," + AnswerXY[0].y + ")";
                 textBoxF2point.Text = "(" + AnswerXY[1].x + "," + AnswerXY[1].y + ")";
-                textBoxFDist.Text = points.SimpleMinDistance().ToString();
+                textBoxFDist.Text = points.MinDistance().ToString();
                 labelError.Text = filename; 
-                  
+                   
                 //Подсчет времени  
                 labelCPP1_Time1.Text = GetSimple_CPPTime(10000,points); 
                 labelCPP1_Time2.Text = GetSimple_CPPTime(15000,points);   

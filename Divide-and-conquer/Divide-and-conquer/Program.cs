@@ -33,14 +33,16 @@ namespace ConsoleTest
 
             List<PointId> Arr = new List<PointId> {
 
-                 new PointId() { x = 0, y = 0, id = 0 },
-                 new PointId() { x = 1, y = -1, id = 1 },
-                 new PointId() { x = 1, y = 3, id = 2 }
-            };
-
+                 new PointId() { x = 1, y = -1, id = 0 },
+                 new PointId() { x = -1, y = 3, id = 1 },
+                 new PointId() { x = -6, y = 6, id = 2 },
+                 new PointId() { x = 5, y = -6, id = 3 },
+                 new PointId() { x = 0, y = 1, id = 4 },
+            }; 
+             
             ClosestPointPair pointPair = new ClosestPointPair(Arr);
 
-            Console.WriteLine(pointPair.SimpleMinDistance());
+            Console.WriteLine(pointPair.MinDistance());
                   
             Console.ReadLine();   
              
