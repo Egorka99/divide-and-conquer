@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.QuickSort = new System.Windows.Forms.GroupBox();
             this.buttonMerge = new System.Windows.Forms.Button();
+            this.textBoxMerge_Sort = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.textBoxMerge_NotSort = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -70,7 +71,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.panelF = new System.Windows.Forms.Panel();
             this.panelG = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -81,6 +81,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.chartPoints = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label31 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.panelF = new System.Windows.Forms.Panel();
             this.labelCPP2_Time4 = new System.Windows.Forms.Label();
             this.labelCPP2_Time3 = new System.Windows.Forms.Label();
             this.labelCPP2_Time2 = new System.Windows.Forms.Label();
@@ -114,20 +118,17 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.textBoxMerge_Sort = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.QuickSort.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartSort)).BeginInit();
             this.tabPage4.SuspendLayout();
-            this.panelF.SuspendLayout();
             this.panelG.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPoints)).BeginInit();
+            this.panelF.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -204,6 +205,13 @@
             this.buttonMerge.Text = "Сортировать";
             this.buttonMerge.UseVisualStyleBackColor = false;
             this.buttonMerge.Click += new System.EventHandler(this.buttonMerge_Click);
+            // 
+            // textBoxMerge_Sort
+            // 
+            this.textBoxMerge_Sort.Location = new System.Drawing.Point(22, 186);
+            this.textBoxMerge_Sort.Name = "textBoxMerge_Sort";
+            this.textBoxMerge_Sort.Size = new System.Drawing.Size(711, 26);
+            this.textBoxMerge_Sort.TabIndex = 4;
             // 
             // label42
             // 
@@ -364,18 +372,18 @@
             // 
             // chartSort
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chartSort.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartSort.Legends.Add(legend6);
+            chartArea1.Name = "ChartArea1";
+            this.chartSort.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartSort.Legends.Add(legend1);
             this.chartSort.Location = new System.Drawing.Point(415, 131);
             this.chartSort.Name = "chartSort";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series9.Legend = "Legend1";
-            series9.LegendText = "График времени сортировки от количества элементов";
-            series9.Name = "Graphic";
-            this.chartSort.Series.Add(series9);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.LegendText = "График времени сортировки от количества элементов";
+            series1.Name = "Graphic";
+            this.chartSort.Series.Add(series1);
             this.chartSort.Size = new System.Drawing.Size(419, 251);
             this.chartSort.TabIndex = 12;
             this.chartSort.Text = "chart1";
@@ -488,12 +496,13 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(702, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.Size = new System.Drawing.Size(87, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = " \tO(n log2 n)";
+            this.label1.Text = "O(n log2 n)";
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label43);
             this.tabPage4.Controls.Add(this.panelG);
             this.tabPage4.Controls.Add(this.label31);
             this.tabPage4.Controls.Add(this.radioButton2);
@@ -505,39 +514,6 @@
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Алгоритм выбора ближайших пар точек ";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // panelF
-            // 
-            this.panelF.BackColor = System.Drawing.Color.Transparent;
-            this.panelF.Controls.Add(this.labelCPP2_Time4);
-            this.panelF.Controls.Add(this.labelCPP2_Time3);
-            this.panelF.Controls.Add(this.labelCPP2_Time2);
-            this.panelF.Controls.Add(this.labelCPP2_Time1);
-            this.panelF.Controls.Add(this.labelCPP1_Time4);
-            this.panelF.Controls.Add(this.labelCPP1_Time3);
-            this.panelF.Controls.Add(this.labelCPP1_Time2);
-            this.panelF.Controls.Add(this.labelCPP1_Time1);
-            this.panelF.Controls.Add(this.label29);
-            this.panelF.Controls.Add(this.label30);
-            this.panelF.Controls.Add(this.label27);
-            this.panelF.Controls.Add(this.label28);
-            this.panelF.Controls.Add(this.label23);
-            this.panelF.Controls.Add(this.label24);
-            this.panelF.Controls.Add(this.label25);
-            this.panelF.Controls.Add(this.label26);
-            this.panelF.Controls.Add(this.label22);
-            this.panelF.Controls.Add(this.label21);
-            this.panelF.Controls.Add(this.label20);
-            this.panelF.Controls.Add(this.label19);
-            this.panelF.Controls.Add(this.label17);
-            this.panelF.Controls.Add(this.label18);
-            this.panelF.Controls.Add(this.label16);
-            this.panelF.Controls.Add(this.groupBox2);
-            this.panelF.Controls.Add(this.label15);
-            this.panelF.Location = new System.Drawing.Point(13, 164);
-            this.panelF.Name = "panelF";
-            this.panelF.Size = new System.Drawing.Size(828, 363);
-            this.panelF.TabIndex = 17;
             // 
             // panelG
             // 
@@ -625,28 +601,95 @@
             // 
             // chartPoints
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartPoints.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartPoints.Legends.Add(legend5);
+            chartArea2.Name = "ChartArea1";
+            this.chartPoints.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartPoints.Legends.Add(legend2);
             this.chartPoints.Location = new System.Drawing.Point(351, 60);
             this.chartPoints.Name = "chartPoints";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series7.Legend = "Legend1";
-            series7.LegendText = "Остальные точки";
-            series7.Name = "Points";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series8.Color = System.Drawing.Color.Red;
-            series8.Legend = "Legend1";
-            series8.LegendText = "Точки с наименьшим расстоянием";
-            series8.Name = "Points2";
-            this.chartPoints.Series.Add(series7);
-            this.chartPoints.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series2.Legend = "Legend1";
+            series2.LegendText = "Остальные точки";
+            series2.Name = "Points";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series3.Color = System.Drawing.Color.Red;
+            series3.Legend = "Legend1";
+            series3.LegendText = "Точки с наименьшим расстоянием";
+            series3.Name = "Points2";
+            this.chartPoints.Series.Add(series2);
+            this.chartPoints.Series.Add(series3);
             this.chartPoints.Size = new System.Drawing.Size(444, 204);
             this.chartPoints.TabIndex = 12;
             this.chartPoints.Text = "chart2";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label31.Location = new System.Drawing.Point(475, 30);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(218, 20);
+            this.label31.TabIndex = 17;
+            this.label31.Text = "N - количество вычислений";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(275, 31);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(141, 20);
+            this.radioButton2.TabIndex = 15;
+            this.radioButton2.Text = "Данные из файла";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(49, 32);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(208, 20);
+            this.radioButton1.TabIndex = 14;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Представление на графике";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // panelF
+            // 
+            this.panelF.BackColor = System.Drawing.Color.Transparent;
+            this.panelF.Controls.Add(this.labelCPP2_Time4);
+            this.panelF.Controls.Add(this.labelCPP2_Time3);
+            this.panelF.Controls.Add(this.labelCPP2_Time2);
+            this.panelF.Controls.Add(this.labelCPP2_Time1);
+            this.panelF.Controls.Add(this.labelCPP1_Time4);
+            this.panelF.Controls.Add(this.labelCPP1_Time3);
+            this.panelF.Controls.Add(this.labelCPP1_Time2);
+            this.panelF.Controls.Add(this.labelCPP1_Time1);
+            this.panelF.Controls.Add(this.label29);
+            this.panelF.Controls.Add(this.label30);
+            this.panelF.Controls.Add(this.label27);
+            this.panelF.Controls.Add(this.label28);
+            this.panelF.Controls.Add(this.label23);
+            this.panelF.Controls.Add(this.label24);
+            this.panelF.Controls.Add(this.label25);
+            this.panelF.Controls.Add(this.label26);
+            this.panelF.Controls.Add(this.label22);
+            this.panelF.Controls.Add(this.label21);
+            this.panelF.Controls.Add(this.label20);
+            this.panelF.Controls.Add(this.label19);
+            this.panelF.Controls.Add(this.label17);
+            this.panelF.Controls.Add(this.label18);
+            this.panelF.Controls.Add(this.label16);
+            this.panelF.Controls.Add(this.groupBox2);
+            this.panelF.Controls.Add(this.label15);
+            this.panelF.Location = new System.Drawing.Point(13, 164);
+            this.panelF.Name = "panelF";
+            this.panelF.Size = new System.Drawing.Size(828, 363);
+            this.panelF.TabIndex = 17;
             // 
             // labelCPP2_Time4
             // 
@@ -957,50 +1000,19 @@
             this.label15.TabIndex = 13;
             this.label15.Text = " \tO(n log2 n)";
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label31.Location = new System.Drawing.Point(475, 30);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(218, 20);
-            this.label31.TabIndex = 17;
-            this.label31.Text = "N - количество вычислений";
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(275, 31);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(141, 20);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.Text = "Данные из файла";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(49, 32);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(208, 20);
-            this.radioButton1.TabIndex = 14;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Представление на графике";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog";
             // 
-            // textBoxMerge_Sort
+            // label43
             // 
-            this.textBoxMerge_Sort.Location = new System.Drawing.Point(22, 186);
-            this.textBoxMerge_Sort.Name = "textBoxMerge_Sort";
-            this.textBoxMerge_Sort.Size = new System.Drawing.Size(711, 26);
-            this.textBoxMerge_Sort.TabIndex = 4;
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label43.Location = new System.Drawing.Point(475, 67);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(78, 20);
+            this.label43.TabIndex = 18;
+            this.label43.Text = "O(n log n)";
             // 
             // Form1
             // 
@@ -1019,12 +1031,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartSort)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.panelF.ResumeLayout(false);
-            this.panelF.PerformLayout();
             this.panelG.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPoints)).EndInit();
+            this.panelF.ResumeLayout(false);
+            this.panelF.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -1117,6 +1129,7 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox textBoxMerge_NotSort;
         private System.Windows.Forms.TextBox textBoxMerge_Sort;
+        private System.Windows.Forms.Label label43;
     }
 }
 

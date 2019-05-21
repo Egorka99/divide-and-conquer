@@ -69,7 +69,7 @@ namespace ClassLibraryDaC
                     a[k] = aux[j--]; 
                 else 
                     a[k] = aux[i++];
-        }
+        } 
 
 
         /// <summary> 
@@ -83,8 +83,8 @@ namespace ClassLibraryDaC
             for (int m = 1; m <= r - l; m = m + m)
                 for (int i = l; i <= r - m; i += m + m)
                     Merge(a, i, i + m - 1, Math.Min(i + m + m - 1, r));
-        }
-    } 
+        } 
+    }  
      
 
 } 
