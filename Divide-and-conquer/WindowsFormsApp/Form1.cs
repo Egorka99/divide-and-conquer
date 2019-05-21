@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form 
     {
         public Form1()
         {
@@ -75,14 +75,14 @@ namespace WindowsFormsApp
              
         }  
          
-        string GetSortTime(int CountElements)
+        string GetSortTimeRec(int CountElements)
         { 
             Stopwatch stopwatch = new Stopwatch();
 
             stopwatch.Start(); 
-             
+              
             MergeSort.RecSort(GenerateArray(CountElements)); 
-
+             
             stopwatch.Stop();
 
             long Time = stopwatch.ElapsedMilliseconds; 
@@ -90,6 +90,21 @@ namespace WindowsFormsApp
             chartSort.Series[0].Points.AddXY(Time, CountElements); 
              
             return Time + "ms";   
+        }
+
+        string GetSortTimeIter(int CountElements)  
+        {  
+            Stopwatch stopwatch = new Stopwatch();
+              
+            stopwatch.Start();
+
+            MergeSort.IterSort(GenerateArray(CountElements),0, GenerateArray(CountElements).Length - 1);
+
+            stopwatch.Stop();  
+             
+            long Time = stopwatch.ElapsedMilliseconds;
+
+            return Time + "ms";
         }
 
         string GetDQ_CPPTime(int CountCalculation,ClosestPointPair input)
@@ -224,19 +239,24 @@ namespace WindowsFormsApp
             }
             
         } 
-
+          
 
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
             chartSort.Series[0].Points.Clear(); 
 
-            labelTime1.Text = GetSortTime(10000);
-            labelTime2.Text = GetSortTime(15000);  
-            labelTime3.Text = GetSortTime(20000);
-            label1Time4.Text = GetSortTime(25000);
+            labelTime1.Text = GetSortTimeRec(10000); 
+            labelTime2.Text = GetSortTimeRec(20000);    
+            labelTime3.Text = GetSortTimeRec(40000);  
+            label1Time4.Text = GetSortTimeRec(80000); 
+              
+            labelTimeA2_1.Text = GetSortTimeIter(10000);
+            labelTimeA2_2.Text = GetSortTimeIter(20000); 
+            labelTimeA2_3.Text = GetSortTimeIter(40000);
+            labelTimeA2_4.Text = GetSortTimeIter(80000);
 
-   
+
         } 
 
         private void buttonGenerate_Click(object sender, EventArgs e)
@@ -258,6 +278,34 @@ namespace WindowsFormsApp
             panelF.Visible = true;
         }
 
+
+        private void buttonMerge_Click(object sender, EventArgs e) 
+        {
+            string[] txt = textBoxMerge_NotSort.Text.Split(' ');
+
+            int[] numbers = new int[txt.Length];
+
+            for (int i = 0; i < txt.Length; i++)
+            {
+                 
+                try
+                {
+                    numbers[i] = Convert.ToInt32(txt[i]);
+                }
+                catch
+                {
+                    MessageBox.Show("Введите последовательность чисел для сортировки!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } 
+              
+            int[] result = MergeSort.RecSort(numbers); 
+
+            textBoxMerge_Sort.Text = "";
+              
+            for (int i = 0; i < result.Length; i++)
+                textBoxMerge_Sort.Text += result[i] + " ";
+
+        }
     }         
 }   
    

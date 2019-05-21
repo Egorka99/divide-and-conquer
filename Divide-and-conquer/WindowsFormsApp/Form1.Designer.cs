@@ -28,15 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.QuickSort = new System.Windows.Forms.GroupBox();
+            this.buttonMerge = new System.Windows.Forms.Button();
+            this.label42 = new System.Windows.Forms.Label();
+            this.textBoxMerge_NotSort = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.labelTimeA2_4 = new System.Windows.Forms.Label();
+            this.labelTimeA2_3 = new System.Windows.Forms.Label();
+            this.labelTimeA2_2 = new System.Windows.Forms.Label();
+            this.labelTimeA2_1 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.chartSort = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1Time4 = new System.Windows.Forms.Label();
@@ -52,9 +70,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label31 = new System.Windows.Forms.Label();
-            this.groupBoxGraphic = new System.Windows.Forms.GroupBox();
             this.panelF = new System.Windows.Forms.Panel();
+            this.panelG = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxG1point = new System.Windows.Forms.TextBox();
+            this.textBoxGDist = new System.Windows.Forms.TextBox();
+            this.textBoxG2point = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.buttonGenerate = new System.Windows.Forms.Button();
+            this.chartPoints = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.labelCPP2_Time4 = new System.Windows.Forms.Label();
             this.labelCPP2_Time3 = new System.Windows.Forms.Label();
             this.labelCPP2_Time2 = new System.Windows.Forms.Label();
@@ -88,43 +114,21 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.panelG = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBoxG1point = new System.Windows.Forms.TextBox();
-            this.textBoxGDist = new System.Windows.Forms.TextBox();
-            this.textBoxG2point = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.buttonGenerate = new System.Windows.Forms.Button();
-            this.chartPoints = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label31 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.labelTimeA2_4 = new System.Windows.Forms.Label();
-            this.labelTimeA2_3 = new System.Windows.Forms.Label();
-            this.labelTimeA2_2 = new System.Windows.Forms.Label();
-            this.labelTimeA2_1 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
+            this.textBoxMerge_Sort = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.QuickSort.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartSort)).BeginInit();
             this.tabPage4.SuspendLayout();
-            this.groupBoxGraphic.SuspendLayout();
             this.panelF.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panelG.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPoints)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -135,11 +139,12 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(845, 475);
+            this.tabControl1.Size = new System.Drawing.Size(845, 696);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.QuickSort);
             this.tabPage3.Controls.Add(this.label34);
             this.tabPage3.Controls.Add(this.label32);
             this.tabPage3.Controls.Add(this.label35);
@@ -170,10 +175,181 @@
             this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(837, 446);
+            this.tabPage3.Size = new System.Drawing.Size(837, 667);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Сортировка слиянием";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // QuickSort
+            // 
+            this.QuickSort.Controls.Add(this.buttonMerge);
+            this.QuickSort.Controls.Add(this.textBoxMerge_Sort);
+            this.QuickSort.Controls.Add(this.label42);
+            this.QuickSort.Controls.Add(this.textBoxMerge_NotSort);
+            this.QuickSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.QuickSort.Location = new System.Drawing.Point(42, 407);
+            this.QuickSort.Name = "QuickSort";
+            this.QuickSort.Size = new System.Drawing.Size(767, 236);
+            this.QuickSort.TabIndex = 30;
+            this.QuickSort.TabStop = false;
+            this.QuickSort.Text = "Cортировка слиянием";
+            // 
+            // buttonMerge
+            // 
+            this.buttonMerge.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonMerge.Location = new System.Drawing.Point(283, 131);
+            this.buttonMerge.Name = "buttonMerge";
+            this.buttonMerge.Size = new System.Drawing.Size(146, 31);
+            this.buttonMerge.TabIndex = 3;
+            this.buttonMerge.Text = "Сортировать";
+            this.buttonMerge.UseVisualStyleBackColor = false;
+            this.buttonMerge.Click += new System.EventHandler(this.buttonMerge_Click);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label42.Location = new System.Drawing.Point(280, 44);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(167, 13);
+            this.label42.TabIndex = 1;
+            this.label42.Text = "Массив из чисел(через пробел)";
+            // 
+            // textBoxMerge_NotSort
+            // 
+            this.textBoxMerge_NotSort.Location = new System.Drawing.Point(22, 80);
+            this.textBoxMerge_NotSort.Name = "textBoxMerge_NotSort";
+            this.textBoxMerge_NotSort.Size = new System.Drawing.Size(711, 26);
+            this.textBoxMerge_NotSort.TabIndex = 0;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(225, 161);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(175, 16);
+            this.label34.TabIndex = 29;
+            this.label34.Text = "\"Восходящая сортировка\"";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(229, 131);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(171, 16);
+            this.label32.TabIndex = 28;
+            this.label32.Text = "Итерационный алгоритм";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(15, 161);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(177, 16);
+            this.label35.TabIndex = 27;
+            this.label35.Text = "\"Низходящая сортировка\"";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(24, 131);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(161, 16);
+            this.label33.TabIndex = 25;
+            this.label33.Text = "Рекурсивный алгоритм";
+            // 
+            // labelTimeA2_4
+            // 
+            this.labelTimeA2_4.AutoSize = true;
+            this.labelTimeA2_4.Location = new System.Drawing.Point(350, 366);
+            this.labelTimeA2_4.Name = "labelTimeA2_4";
+            this.labelTimeA2_4.Size = new System.Drawing.Size(15, 16);
+            this.labelTimeA2_4.TabIndex = 23;
+            this.labelTimeA2_4.Text = "0";
+            // 
+            // labelTimeA2_3
+            // 
+            this.labelTimeA2_3.AutoSize = true;
+            this.labelTimeA2_3.Location = new System.Drawing.Point(350, 325);
+            this.labelTimeA2_3.Name = "labelTimeA2_3";
+            this.labelTimeA2_3.Size = new System.Drawing.Size(15, 16);
+            this.labelTimeA2_3.TabIndex = 22;
+            this.labelTimeA2_3.Text = "0";
+            // 
+            // labelTimeA2_2
+            // 
+            this.labelTimeA2_2.AutoSize = true;
+            this.labelTimeA2_2.Location = new System.Drawing.Point(350, 286);
+            this.labelTimeA2_2.Name = "labelTimeA2_2";
+            this.labelTimeA2_2.Size = new System.Drawing.Size(15, 16);
+            this.labelTimeA2_2.TabIndex = 21;
+            this.labelTimeA2_2.Text = "0";
+            // 
+            // labelTimeA2_1
+            // 
+            this.labelTimeA2_1.AutoSize = true;
+            this.labelTimeA2_1.Location = new System.Drawing.Point(350, 246);
+            this.labelTimeA2_1.Name = "labelTimeA2_1";
+            this.labelTimeA2_1.Size = new System.Drawing.Size(15, 16);
+            this.labelTimeA2_1.TabIndex = 20;
+            this.labelTimeA2_1.Text = "0";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label36.Location = new System.Drawing.Point(333, 202);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(58, 20);
+            this.label36.TabIndex = 19;
+            this.label36.Text = "Время";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(236, 366);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(46, 16);
+            this.label37.TabIndex = 18;
+            this.label37.Text = "80 000";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(236, 325);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(46, 16);
+            this.label38.TabIndex = 17;
+            this.label38.Text = "40 000";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(236, 286);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(46, 16);
+            this.label39.TabIndex = 16;
+            this.label39.Text = "20 000";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(236, 246);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(46, 16);
+            this.label40.TabIndex = 15;
+            this.label40.Text = "10 000";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label41.Location = new System.Drawing.Point(250, 202);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(24, 20);
+            this.label41.TabIndex = 14;
+            this.label41.Text = "N ";
             // 
             // buttonCalculate
             // 
@@ -188,18 +364,18 @@
             // 
             // chartSort
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartSort.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartSort.Legends.Add(legend3);
+            chartArea6.Name = "ChartArea1";
+            this.chartSort.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartSort.Legends.Add(legend6);
             this.chartSort.Location = new System.Drawing.Point(415, 131);
             this.chartSort.Name = "chartSort";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.LegendText = "График времени сортировки от количества элементов";
-            series4.Name = "Graphic";
-            this.chartSort.Series.Add(series4);
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Legend = "Legend1";
+            series9.LegendText = "График времени сортировки от количества элементов";
+            series9.Name = "Graphic";
+            this.chartSort.Series.Add(series9);
             this.chartSort.Size = new System.Drawing.Size(419, 251);
             this.chartSort.TabIndex = 12;
             this.chartSort.Text = "chart1";
@@ -257,7 +433,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 16);
             this.label7.TabIndex = 6;
-            this.label7.Text = "25 000";
+            this.label7.Text = "80 000";
             // 
             // label6
             // 
@@ -266,7 +442,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 5;
-            this.label6.Text = "20 000";
+            this.label6.Text = "40 000";
             // 
             // label5
             // 
@@ -275,7 +451,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "15 000";
+            this.label5.Text = "20 000";
             // 
             // label4
             // 
@@ -318,37 +494,17 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.panelG);
             this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Controls.Add(this.groupBoxGraphic);
             this.tabPage4.Controls.Add(this.radioButton2);
             this.tabPage4.Controls.Add(this.radioButton1);
+            this.tabPage4.Controls.Add(this.panelF);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(837, 446);
+            this.tabPage4.Size = new System.Drawing.Size(837, 667);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Алгоритм выбора ближайших пар точек ";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label31.Location = new System.Drawing.Point(475, 30);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(218, 20);
-            this.label31.TabIndex = 17;
-            this.label31.Text = "N - количество вычислений";
-            // 
-            // groupBoxGraphic
-            // 
-            this.groupBoxGraphic.BackColor = System.Drawing.Color.Transparent;
-            this.groupBoxGraphic.Controls.Add(this.panelF);
-            this.groupBoxGraphic.Controls.Add(this.panelG);
-            this.groupBoxGraphic.Location = new System.Drawing.Point(3, 82);
-            this.groupBoxGraphic.Name = "groupBoxGraphic";
-            this.groupBoxGraphic.Size = new System.Drawing.Size(819, 329);
-            this.groupBoxGraphic.TabIndex = 16;
-            this.groupBoxGraphic.TabStop = false;
             // 
             // panelF
             // 
@@ -378,10 +534,119 @@
             this.panelF.Controls.Add(this.label16);
             this.panelF.Controls.Add(this.groupBox2);
             this.panelF.Controls.Add(this.label15);
-            this.panelF.Location = new System.Drawing.Point(3, 0);
+            this.panelF.Location = new System.Drawing.Point(13, 164);
             this.panelF.Name = "panelF";
-            this.panelF.Size = new System.Drawing.Size(828, 361);
+            this.panelF.Size = new System.Drawing.Size(828, 363);
             this.panelF.TabIndex = 17;
+            // 
+            // panelG
+            // 
+            this.panelG.Controls.Add(this.groupBox1);
+            this.panelG.Controls.Add(this.chartPoints);
+            this.panelG.Location = new System.Drawing.Point(13, 164);
+            this.panelG.Name = "panelG";
+            this.panelG.Size = new System.Drawing.Size(813, 329);
+            this.panelG.TabIndex = 17;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.textBoxG1point);
+            this.groupBox1.Controls.Add(this.textBoxGDist);
+            this.groupBox1.Controls.Add(this.textBoxG2point);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.buttonGenerate);
+            this.groupBox1.Location = new System.Drawing.Point(6, 60);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(339, 187);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Представление на графике";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 94);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(161, 16);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Пара ближайших точек:";
+            // 
+            // textBoxG1point
+            // 
+            this.textBoxG1point.Location = new System.Drawing.Point(173, 94);
+            this.textBoxG1point.Name = "textBoxG1point";
+            this.textBoxG1point.ReadOnly = true;
+            this.textBoxG1point.Size = new System.Drawing.Size(53, 22);
+            this.textBoxG1point.TabIndex = 5;
+            // 
+            // textBoxGDist
+            // 
+            this.textBoxGDist.Location = new System.Drawing.Point(111, 138);
+            this.textBoxGDist.Name = "textBoxGDist";
+            this.textBoxGDist.ReadOnly = true;
+            this.textBoxGDist.Size = new System.Drawing.Size(82, 22);
+            this.textBoxGDist.TabIndex = 4;
+            // 
+            // textBoxG2point
+            // 
+            this.textBoxG2point.Location = new System.Drawing.Point(256, 94);
+            this.textBoxG2point.Name = "textBoxG2point";
+            this.textBoxG2point.ReadOnly = true;
+            this.textBoxG2point.Size = new System.Drawing.Size(53, 22);
+            this.textBoxG2point.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 141);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(88, 16);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Расстояние:";
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(0, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(100, 23);
+            this.label9.TabIndex = 6;
+            // 
+            // buttonGenerate
+            // 
+            this.buttonGenerate.Location = new System.Drawing.Point(44, 34);
+            this.buttonGenerate.Name = "buttonGenerate";
+            this.buttonGenerate.Size = new System.Drawing.Size(174, 38);
+            this.buttonGenerate.TabIndex = 1;
+            this.buttonGenerate.Text = "Сгенерировать точки";
+            this.buttonGenerate.UseVisualStyleBackColor = true;
+            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
+            // 
+            // chartPoints
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.chartPoints.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartPoints.Legends.Add(legend5);
+            this.chartPoints.Location = new System.Drawing.Point(351, 60);
+            this.chartPoints.Name = "chartPoints";
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series7.Legend = "Legend1";
+            series7.LegendText = "Остальные точки";
+            series7.Name = "Points";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series8.Color = System.Drawing.Color.Red;
+            series8.Legend = "Legend1";
+            series8.LegendText = "Точки с наименьшим расстоянием";
+            series8.Name = "Points2";
+            this.chartPoints.Series.Add(series7);
+            this.chartPoints.Series.Add(series8);
+            this.chartPoints.Size = new System.Drawing.Size(444, 204);
+            this.chartPoints.TabIndex = 12;
+            this.chartPoints.Text = "chart2";
             // 
             // labelCPP2_Time4
             // 
@@ -692,114 +957,15 @@
             this.label15.TabIndex = 13;
             this.label15.Text = " \tO(n log2 n)";
             // 
-            // panelG
+            // label31
             // 
-            this.panelG.Controls.Add(this.groupBox1);
-            this.panelG.Controls.Add(this.chartPoints);
-            this.panelG.Location = new System.Drawing.Point(0, 3);
-            this.panelG.Name = "panelG";
-            this.panelG.Size = new System.Drawing.Size(819, 356);
-            this.panelG.TabIndex = 17;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBoxG1point);
-            this.groupBox1.Controls.Add(this.textBoxGDist);
-            this.groupBox1.Controls.Add(this.textBoxG2point);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.buttonGenerate);
-            this.groupBox1.Location = new System.Drawing.Point(6, 60);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(339, 187);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Представление на графике";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 94);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(161, 16);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Пара ближайших точек:";
-            // 
-            // textBoxG1point
-            // 
-            this.textBoxG1point.Location = new System.Drawing.Point(173, 94);
-            this.textBoxG1point.Name = "textBoxG1point";
-            this.textBoxG1point.ReadOnly = true;
-            this.textBoxG1point.Size = new System.Drawing.Size(53, 22);
-            this.textBoxG1point.TabIndex = 5;
-            // 
-            // textBoxGDist
-            // 
-            this.textBoxGDist.Location = new System.Drawing.Point(111, 138);
-            this.textBoxGDist.Name = "textBoxGDist";
-            this.textBoxGDist.ReadOnly = true;
-            this.textBoxGDist.Size = new System.Drawing.Size(82, 22);
-            this.textBoxGDist.TabIndex = 4;
-            // 
-            // textBoxG2point
-            // 
-            this.textBoxG2point.Location = new System.Drawing.Point(256, 94);
-            this.textBoxG2point.Name = "textBoxG2point";
-            this.textBoxG2point.ReadOnly = true;
-            this.textBoxG2point.Size = new System.Drawing.Size(53, 22);
-            this.textBoxG2point.TabIndex = 3;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 141);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 16);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Расстояние:";
-            // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(0, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 23);
-            this.label9.TabIndex = 6;
-            // 
-            // buttonGenerate
-            // 
-            this.buttonGenerate.Location = new System.Drawing.Point(44, 34);
-            this.buttonGenerate.Name = "buttonGenerate";
-            this.buttonGenerate.Size = new System.Drawing.Size(174, 38);
-            this.buttonGenerate.TabIndex = 1;
-            this.buttonGenerate.Text = "Сгенерировать точки";
-            this.buttonGenerate.UseVisualStyleBackColor = true;
-            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
-            // 
-            // chartPoints
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.chartPoints.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartPoints.Legends.Add(legend4);
-            this.chartPoints.Location = new System.Drawing.Point(358, 60);
-            this.chartPoints.Name = "chartPoints";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series5.Legend = "Legend1";
-            series5.LegendText = "Остальные точки";
-            series5.Name = "Points";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series6.Color = System.Drawing.Color.Red;
-            series6.Legend = "Legend1";
-            series6.LegendText = "Точки с наименьшим расстоянием";
-            series6.Name = "Points2";
-            this.chartPoints.Series.Add(series5);
-            this.chartPoints.Series.Add(series6);
-            this.chartPoints.Size = new System.Drawing.Size(444, 204);
-            this.chartPoints.TabIndex = 12;
-            this.chartPoints.Text = "chart2";
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label31.Location = new System.Drawing.Point(475, 30);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(218, 20);
+            this.label31.TabIndex = 17;
+            this.label31.Text = "N - количество вычислений";
             // 
             // radioButton2
             // 
@@ -829,139 +995,18 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog";
             // 
-            // labelTimeA2_4
+            // textBoxMerge_Sort
             // 
-            this.labelTimeA2_4.AutoSize = true;
-            this.labelTimeA2_4.Location = new System.Drawing.Point(350, 366);
-            this.labelTimeA2_4.Name = "labelTimeA2_4";
-            this.labelTimeA2_4.Size = new System.Drawing.Size(15, 16);
-            this.labelTimeA2_4.TabIndex = 23;
-            this.labelTimeA2_4.Text = "0";
-            // 
-            // labelTimeA2_3
-            // 
-            this.labelTimeA2_3.AutoSize = true;
-            this.labelTimeA2_3.Location = new System.Drawing.Point(350, 325);
-            this.labelTimeA2_3.Name = "labelTimeA2_3";
-            this.labelTimeA2_3.Size = new System.Drawing.Size(15, 16);
-            this.labelTimeA2_3.TabIndex = 22;
-            this.labelTimeA2_3.Text = "0";
-            // 
-            // labelTimeA2_2
-            // 
-            this.labelTimeA2_2.AutoSize = true;
-            this.labelTimeA2_2.Location = new System.Drawing.Point(350, 286);
-            this.labelTimeA2_2.Name = "labelTimeA2_2";
-            this.labelTimeA2_2.Size = new System.Drawing.Size(15, 16);
-            this.labelTimeA2_2.TabIndex = 21;
-            this.labelTimeA2_2.Text = "0";
-            // 
-            // labelTimeA2_1
-            // 
-            this.labelTimeA2_1.AutoSize = true;
-            this.labelTimeA2_1.Location = new System.Drawing.Point(350, 246);
-            this.labelTimeA2_1.Name = "labelTimeA2_1";
-            this.labelTimeA2_1.Size = new System.Drawing.Size(15, 16);
-            this.labelTimeA2_1.TabIndex = 20;
-            this.labelTimeA2_1.Text = "0";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label36.Location = new System.Drawing.Point(333, 202);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(58, 20);
-            this.label36.TabIndex = 19;
-            this.label36.Text = "Время";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(236, 366);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(46, 16);
-            this.label37.TabIndex = 18;
-            this.label37.Text = "25 000";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(236, 325);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(46, 16);
-            this.label38.TabIndex = 17;
-            this.label38.Text = "20 000";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(236, 286);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(46, 16);
-            this.label39.TabIndex = 16;
-            this.label39.Text = "15 000";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(236, 246);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(46, 16);
-            this.label40.TabIndex = 15;
-            this.label40.Text = "10 000";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label41.Location = new System.Drawing.Point(250, 202);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(24, 20);
-            this.label41.TabIndex = 14;
-            this.label41.Text = "N ";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(24, 131);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(161, 16);
-            this.label33.TabIndex = 25;
-            this.label33.Text = "Рекурсивный алгоритм";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(15, 161);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(177, 16);
-            this.label35.TabIndex = 27;
-            this.label35.Text = "\"Низходящая сортировка\"";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(225, 161);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(175, 16);
-            this.label34.TabIndex = 29;
-            this.label34.Text = "\"Восходящая сортировка\"";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(229, 131);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(171, 16);
-            this.label32.TabIndex = 28;
-            this.label32.Text = "Итерационный алгоритм";
+            this.textBoxMerge_Sort.Location = new System.Drawing.Point(22, 186);
+            this.textBoxMerge_Sort.Name = "textBoxMerge_Sort";
+            this.textBoxMerge_Sort.Size = new System.Drawing.Size(711, 26);
+            this.textBoxMerge_Sort.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 487);
+            this.ClientSize = new System.Drawing.Size(869, 744);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Разделяй и властвуй";
@@ -969,18 +1014,19 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.QuickSort.ResumeLayout(false);
+            this.QuickSort.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartSort)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.groupBoxGraphic.ResumeLayout(false);
             this.panelF.ResumeLayout(false);
             this.panelF.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panelG.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPoints)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1026,7 +1072,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.GroupBox groupBoxGraphic;
         private System.Windows.Forms.Panel panelG;
         private System.Windows.Forms.Panel panelF;
         private System.Windows.Forms.Label label17;
@@ -1067,6 +1112,11 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.GroupBox QuickSort;
+        private System.Windows.Forms.Button buttonMerge;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox textBoxMerge_NotSort;
+        private System.Windows.Forms.TextBox textBoxMerge_Sort;
     }
 }
 
